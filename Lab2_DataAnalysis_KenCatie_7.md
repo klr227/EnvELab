@@ -36,8 +36,8 @@ vol_tankwater = (mass_tankwater/density_water).to(u.L)
 flow_rate = (101*u.mL/(25*u.s)).to(u.L/u.s)
 theta = vol_tankwater/flow_rate
 
-# import pH data from spreadsheet
-data_file_path_1 = "/Users/kenrivero/Documents/EnvELab/acid_rain_lab1.tsv"
+# import pH data from spreadsheet located on GitHub
+data_file_path_1 = "https://raw.githubusercontent.com/klr227/EnvELab/master/acid_rain_lab1.tsv"
 #df = pd.read_csv(data_file_path,delimiter='\t')
 
 # Use the epa.notes function to find what you've commented in the data file.
@@ -106,7 +106,7 @@ plt.show()
 
 #Section 2: This section contains information for the CaCO3 solution
 # import pH data from spreadsheet
-data_file_path_2 = "/Users/kenrivero/Documents/EnvELab/acid_rain_lab1_pt2.tsv"
+data_file_path_2 = "https://raw.githubusercontent.com/klr227/EnvELab/master/acid_rain_lab1_pt2.tsv"
 #df = pd.read_csv(data_file_path,delimiter='\t')
 
 # Use the epa.notes function to find what you've commented in the data file.
