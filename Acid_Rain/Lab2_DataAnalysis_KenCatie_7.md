@@ -62,7 +62,7 @@ plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('pH')
 plt.title('NaHCO3 pH vs. Dimensionless Hyd. Residence Time')
 ax.legend(['pH'])
-plt.savefig('/Users/kenrivero/Documents/EnvELab/pHgraph')
+plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/pHgraph')
 plt.show()
 
 
@@ -79,7 +79,7 @@ plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('ANC')
 plt.title('NaHCO3 Exp. ANC in lake output(CMFR) vs hyd. residence time')
 ax.legend(['Conservative ANC'])
-plt.savefig('/Users/kenrivero/Documents/EnvELab/Output_conc_CMFR')
+plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/Output_conc_CMFR')
 plt.show()
 
 
@@ -102,7 +102,7 @@ plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('ANC')
 plt.title('NaHCO3 Exp. ANC of closed/open System vs Hyd. Res. Time')
 ax.legend(['ANC closed system','ANC open system'])
-plt.savefig('/Users/kenrivero/Documents/EnvELab/ANC_openclosed')
+plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/ANC_openclosed')
 plt.show()
 
 
@@ -131,7 +131,7 @@ plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('pH')
 plt.title('CaCO3 pH vs. Dimensionless Hyd. Residence Time')
 ax.legend(['pH'])
-plt.savefig('/Users/kenrivero/Documents/EnvELab/pHgraph_2')
+plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/pHgraph_2')
 plt.show()
 
 
@@ -148,7 +148,7 @@ plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('ANC')
 plt.title('CaCO3 Exp. ANC in lake output (CMFR) vs Hyd residence time')
 ax.legend(['Conservative ANC'])
-plt.savefig('/Users/kenrivero/Documents/EnvELab/Output_conc_CMFR_2')
+plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/Output_conc_CMFR_2')
 plt.show()
 
 
@@ -171,7 +171,7 @@ plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('ANC')
 plt.title('CaCO3 Exp. ANC of closed/open System vs Hyd Res Time')
 ax.legend(['ANC closed system','ANC open system'])
-plt.savefig('/Users/kenrivero/Documents/EnvELab/ANC_openclosed_2')
+plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/ANC_openclosed_2')
 plt.show()
 ```
 ![pHgraph](https://github.com/klr227/EnvELab/blob/master/Acid_Rain/pHgraph.png)

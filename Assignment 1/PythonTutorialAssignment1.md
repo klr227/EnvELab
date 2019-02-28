@@ -51,7 +51,7 @@
   plt.show()
 ```
 
-  ![linreggraph]('https://github.com/klr227/EnvELab/blob/master/linreggraph.png')
+  ![linreggraph]µ('https://github.com/klr227/EnvELab/blob/master/linreggraph.png')
 Figure 1. This is a linear regression line for the data collected in the first lab.
 
   $$y= slope * x + intercept = (-0.01994 LV/mg) * x + 1.56527 V$$
