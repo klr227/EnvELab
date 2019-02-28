@@ -35,6 +35,7 @@ plt.xlabel('Titrant volume (mL)')
 plt.ylabel('pH')
 plt.title('pH vs. Titrant volume (mL)')
 ax.legend(['pH'])
+ax.grid(True)
 ax.annotate('First Reaction', xy=(.35, 7), xytext=(1, 7.5),
             arrowprops=dict(facecolor='black', shrink=1))
 ax.annotate('Second Reaction', xy=(1.75, 4.5), xytext=(.25, 4),
