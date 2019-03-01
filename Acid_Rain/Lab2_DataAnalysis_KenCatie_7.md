@@ -20,6 +20,7 @@ import aguaclara.research.environmental_processes_analysis as epa
 from scipy import optimize
 import math
 
+#Data Analysis for Lab 2 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 #Given Values
 k1 = 10**-6.3
 k2 = 10**-10.3
@@ -60,7 +61,6 @@ fig, ax = plt.subplots()
 ax.plot(res,lakepH,'r')
 plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('pH')
-plt.title('NaHCO3 pH vs. Dimensionless Hyd. Residence Time')
 ax.legend(['pH'])
 plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/pHgraph')
 plt.show()
@@ -93,16 +93,14 @@ ANC_out_closed = epa.ANC_closed(lakepH,Total_Carbonates_conc)
 
 #Part 4: ANC in open system
 ANC_out_open = epa.ANC_open(lakepH)
+
 fig, ax = plt.subplots()
 plt.plot(res,ANC_out_closed,'r')
-plt.xlabel('Hydraulic Residence Time')
-plt.ylabel('ANC')
 plt.plot(res,ANC_out_open,'b')
 plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('ANC')
-plt.title('NaHCO3 Exp. ANC of closed/open System vs Hyd. Res. Time')
-ax.legend(['ANC closed system','ANC open system'])
-plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/ANC_openclosed')
+ax.legend(['ANC closed system','ANC open system','Measured ANC'])
+plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/ANC_openclosedmeasured')
 plt.show()
 
 
@@ -162,6 +160,7 @@ ANC_out_closed_2 = epa.ANC_closed(lakepH_2,Total_Carbonates_conc_2)
 
 #Part 4: ANC in open system
 ANC_out_open_2 = epa.ANC_open(lakepH_2)
+
 fig, ax = plt.subplots()
 plt.plot(res_2,ANC_out_closed_2,'r')
 plt.xlabel('Hydraulic Residence Time')

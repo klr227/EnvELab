@@ -82,3 +82,17 @@ plt.show()
 
 calc_EV = ANC / slope
 calc_EV.to(u.eq)*1000
+
+#Part 3 **************************************************************
+
+ANC_0 = 0.001826
+ANC_5 = 0.000922 * u.eq/u.L
+ANC_10 = 0.000276 * u.eq/u.L
+ANC_15 = -0.00008 * u.eq/u.L
+
+ANC_array = [ANC_0,ANC_5,ANC_10,ANC_15]
+
+time_array = [0,5,10,15] * u.min
+time_array = (time_array).to(u.s)
+time_array
+hydraulic_res_time = time_array/theta
