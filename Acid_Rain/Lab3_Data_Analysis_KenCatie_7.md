@@ -14,9 +14,9 @@ data_file_path =('https://raw.githubusercontent.com/klr227/EnvELab/master/Acid_R
 df = pd.read_csv(data_file_path,delimiter='\t')
 
 # The column headers can be access by using the list command
-list(df)
-columns = df.columns
-print(columns)
+#list(df)
+#columns = df.columns
+#print(columns)
 
 #Part 1 ***************************************************************
 #Assign variables to the data in the dataframe (Titrant volume (mL), pH, sample volume (mL), titrant normality, equivalent volume (mL), ANC (eq/L), R^2). F1 is assigned later in Part 2.

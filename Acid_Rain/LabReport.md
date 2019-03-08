@@ -1,3 +1,48 @@
+Lab Report 3: Acid Rain and ANC
+Group 7
+Ken Rivero-Rivera (klr227)
+Catherin Johnson (caj92)
+
+Introduction:
+Acid rain was a major environmental problem in the freshwater bodies of the United States and North America in recent decades. Acid rain has increased due to increased emissions, and the result has been acidified lakes and rivers. Lakes in particular accumulate this higher pH water, and it causes climatological problems within the lake ecosystem. Many lakes contain carbonates in solid form, which can be beneficial in combatting acidification because of the acid neutralizing capacity of carbonates.
+
+Acid neutralizing capacity (ANC) is the ability of water to neutralize acid inputs. Lakes with more ANC are able to maintain a neutral pH despite some acid rain input, whereas lakes with low ANC would quickly become acidified.
+
+Purpose:
+The purpose of this lab is to understand the mechanisms and trends associated with acid rain input under different lake conditions.
+
+Important Equations:
+$$ANC = [HCO_3^-]+2[CO_3^{-2} ]+{[OH}^- ] - [H^+]$$
+$$V_{e} {\; =}\frac{V_{s} \cdot N_{s} }{N_{t} }$$
+$$F_1 = \frac{V_s +V_t }{V_s } {[H}^+ {]}$$
+
+Procedures:
+First, pump acid rain into your well-mixed lake using the apparatus shown in the figure below. The lake should have an indicator and a NaHCO3 in it before the acid rain pumping begins. Once pumping commences, take samples at 0min, 5min, 10min, 15min, and 20min of pumping. While the acid rain is pumped into the lake, the pH probe will be measuring the current pH in the lake as the experiment takes place.
+
+To determine the ANC of the acid rain samples, measure out 50mL of the sample, and measure the pH using the pH probe. If the pH is less than 4.5, no titration is needed because the ANC equation (see equation 1) will be dominated by [H+] and therefore can be easily calculated from pH. Otherwise, a titration will be necessary. Using the gran plot analysis function of ProCoDA, add titrant and obtain a gran plot curve which will be used to determine the ANC in the analysis.
+
+Results and Discussion:
+The ANC values that were found for the 0min, 5min, 10min, and 15min samples can be shown in the table below.
+
+\begin{center}
+\begin{tabular}{ c c }
+  \hline
+  Sample & ANC in eq/L
+  \hline
+  0min & 0.001826 \\
+  5min & 0.000922 \\
+  10min & 0.000276 \\
+  15min & 0 \\
+  20min &
+\end{tabular}
+\end{center}
+
+
+![](https://github.com/klr227/EnvELab/blob/master/Acid_Rain/Gran_Plot.png)
+Figure 1: Gran Plot of F1 vs.tritrant volume
+
+Figure 1 shows the plot F1 vs. the titrant volume added for the 0minute sample, or the sample with no acid in it. On the graph, the red points represent titrant added before the sample acidified. The blue dots represent the points where the water began to acidify.
+
 Below is the code for Lab's 2 and 3 data analysis.
 ```python
 #Import python packages.
@@ -240,6 +285,7 @@ time_array = (time_array).to(u.s)
 hydraulic_res_time = time_array/theta
 
 fig, ax = plt.subplots()
+plt.plot(res,Output_conc_CMFR,'y')
 plt.plot(res,ANC_out_closed,'r')
 plt.plot(res,ANC_out_open,'b')
 plt.scatter(0,ANC_0,color = 'green')
@@ -248,6 +294,6 @@ plt.scatter(hydraulic_res_time[2],ANC_10,color = 'green')
 plt.scatter(hydraulic_res_time[3],ANC_15,color = 'green')
 plt.xlabel('Hydraulic Residence Time')
 plt.ylabel('ANC')
-ax.legend(['ANC closed system','ANC open system','Measured ANC'])
+ax.legend(['Conservative ANC','ANC closed system','ANC open system','Measured ANC'])
 plt.savefig('/Users/kenrivero/Documents/EnvELab/Acid_Rain/ANC_openclosedmeasuredpoints')
 plt.show()
