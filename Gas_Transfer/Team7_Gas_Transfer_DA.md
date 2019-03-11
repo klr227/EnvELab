@@ -1,3 +1,38 @@
+#Gas Transfer Lab Analysis
+##Group 7
+###Ken Rivero-Rivera  - 8 hours
+###Catherine Johnson  10 hours
+
+####Number 2: Plot a representative subset of the data showing dissolved oxygen vs. time. Perhaps show 5 plots on one graph.
+![](https://github.com/klr227/EnvELab/blob/master/Gas_Transfer/DO_vs_time_5graphs.png)
+**Figure 1: Graph of DO v. Time**
+
+####Number 3: Calculate C* based on the average water temperature, barometric pressure, and the equation from environmental processes analysis called O2_sat. C* = P_O2 * e^((1727/T) - 2.105) where T is in Kelvin, P_O2 is the partial pressure of oxygen in atm, and C* is  in mg/L.
+
+C* = 8.896 mg/L
+
+####Number 4: Estimate k_vl using linear regression and equation (103) for each data set.
+
+####Number 5: Create a graph with a representative plot showing the model curve (as a smooth curve) and the data from one experiment. You will need to derive the equation for the concentration of oxygen as a function of time based on equation (103).
+![](https://github.com/klr227/EnvELab/blob/master/Gas_Transfer/ModelandExperimentData_Cgraph.png)
+**Figure 2:Model vs. Observed Data for k_vl**
+
+####Number 6: Plot k_vl as a function of airflow rate (µmole/sec).
+![](https://github.com/klr227/EnvELab/blob/master/Gas_Transfer/k_vl_vs_Airflow_Rates.png)
+**Figure 3: k_vl vs. Air flow rate (umole/s)**
+
+####Number 7: Plot OTE as a function of airflow rate (µmole/s) with the oxygen deficit set at 6 mg/L.
+
+![](https://github.com/klr227/EnvELab/blob/master/Gas_Transfer/OTE_vs_Airflow_Rate.png)
+**Figure 4: OTE vs. Airflow rate (umole/s)**
+
+####Number 8: Comment on the oxygen transfer efficiency and the trend or trends that you observe:
+Oxygen transfer efficiency decreases as air flow increases.
+
+####Number 9: Propose a change to the experimental apparatus that would increase the efficiency.
+To increase the oxygen transfer efficiency, the airflow must be increased, based on part 8. If the needle valves were larger (i.e. let more air through) that should increase the OTE in this experiment.
+
+####Number 10: Verify that your report and graphs meet the requirements.
 ```python
 from aguaclara.core.units import unit_registry as u
 import aguaclara.research.environmental_processes_analysis as epa
@@ -130,12 +165,14 @@ k_vl = [] #initialize k_vl values
 for i in range(airflows.size):
   C_values = DO_data[:][i]
   t_values = time_data[:][i]
-  y = np.log((C_star-C_values)/(C_star-C_0_values[i]))
-  x = t_values - t_0[0]
+  y = np.log((C_star-C_values)/(C_star-C_0[i]))
+  x = -1*(t_values - t_0[i])
   slope, intercept, r_value,p_value,std_err =stats.linregress(x,y)
   k_vl.append(slope)
 
-
+k_vl
+DO_data[1]
+DO_data[:][1]
 #number 5: plot model and actual data -- will need to create a model
 #This random function is used to index any of the flow rates randomnly
 rand = randint(0,airflows.size)
@@ -144,10 +181,10 @@ t = np.linspace(0,100)
 #Calculate for the concentration of dissolved oxygen using equation (103) from the lab manual and solving for C.
 #Used the C_0 values from a random airflow and K_vl values from the same airflow
 C = C_star - ((C_star-C_0[rand])* np.exp(-k_vl[rand]*t))
-
-plt.plot(t,C,'g')
-plt.plot(time_data[:][rand],DO_data[:][rand])
-plt.legend(['Model Concentration','Experimental Concentration %i'])
+a = airflows[rand].magnitude
+plt.plot(t,C,'g',label = 'Model Concentration')
+plt.plot(time_data[:][rand],DO_data[:][rand],label = '%.2f micromoles/second' %a)
+plt.legend(loc='best')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Concentration of Oxygen (mg/L)')
 plt.savefig('/Users/kenrivero/Documents/EnvELab/Gas_Transfer/ModelandExperimentData_Cgraph')
@@ -171,6 +208,8 @@ for k in range(airflows.size):
   value = V*k_vl[k]*(O2_deficit)/(f_O2*airflows[k]*MWO2)
   OTE.append(value)
 
+OTE = [x.magnitude for x in OTE]
+airflows = [x.magnitude for x in airflows]
 plt.scatter(airflows,OTE)
 plt.xlabel('Air Flow Rate in micromoles/second')
 plt.ylabel('Oxygen Transfer Efficiency')
