@@ -1,7 +1,7 @@
 #Reactor Characteristics
 ##Group 7:
-Ken Rivero Rivera - 1 hours
-Catherine Johnson - 1 hours
+Ken Rivero Rivera - 3 hours
+Catherine Johnson - 3 hours
 ##Introduction:
 In water and wastewater treatment plants, chlorine is used to disinfect water in contact tanks. In order to maximize the effectiveness of the disinfecting process, the time the water spends in the tank must also be maximized. This allows for a better chance that bacteria and other pathogens in the water will be neutralized. This lab experiment is a tracer study, which are used to understand the characteristics of different reactor apparatuses.
 ##Objectives:
@@ -34,6 +34,13 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
 
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
+
+CMFR: Pe = n/a , N= 1.00
+One Baffle: Pe = 5 , N = 1.801
+Trial 2: Pe = 5, N = 2.17
+Trial 3: Pe = 5, N = 2.210
+Trial 4: Pe = 5; N = 3.37
+
 
 ###4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?
 
@@ -106,8 +113,6 @@ plt.show()
 
 #Load a data file for a reactor with baffles.
 one_baffle_path = 'https://raw.githubusercontent.com/klr227/EnvELab/master/Reactor_Characteristics/baffle_test_1.xls'
-
-epa.notes(one_baffle_path)
 one_baffle_firstrow = epa.notes(one_baffle_path).last_valid_index() + 1
 one_baffle_time_data = (epa.column_of_time(one_baffle_path,one_baffle_firstrow,-1)).to(u.s)
 one_baffle_concentration_data = epa.column_of_data(one_baffle_path,one_baffle_firstrow,1,-1,'mg/L')
@@ -186,7 +191,7 @@ trial2_mass = 1537 *u.g
 trial2_V = trial2_mass/density_H2O
 trial2_Q = 380 * u.mL/u.min
 trial2_theta_hydraulic = (trial2_V/trial2_Q).to(u.s)
-trial2_C_bar_guess = np.max(trial2_concentration_data)/2
+trial2_C_bar_guess = np.max(trial2_concentration_data)/3
 #use solver to get the CMFR parameters
 trial2_CMFR = epa.Solver_CMFR_N(trial2_time_data, trial2_concentration_data, trial2_theta_hydraulic, trial2_C_bar_guess)
 trial2_CMFR.C_bar
@@ -245,7 +250,7 @@ trial3_mass = 1557 *u.g
 trial3_V = trial3_mass/density_H2O
 trial3_Q = 380 * u.mL/u.min
 trial3_theta_hydraulic = (trial3_V/trial3_Q).to(u.s)
-trial3_C_bar_guess = np.max(trial3_concentration_data)/2
+trial3_C_bar_guess = np.max(trial3_concentration_data)/4
 #use solver to get the CMFR parameters
 trial3_CMFR = epa.Solver_CMFR_N(trial3_time_data, trial3_concentration_data, trial3_theta_hydraulic, trial3_C_bar_guess)
 trial3_CMFR.C_bar
@@ -305,7 +310,7 @@ trial4_mass = 1598 *u.g
 trial4_V = trial4_mass/density_H2O
 trial4_Q = 380 * u.mL/u.min
 trial4_theta_hydraulic = (trial4_V/trial4_Q).to(u.s)
-trial4_C_bar_guess = np.max(trial4_concentration_data)/2
+trial4_C_bar_guess = np.max(trial4_concentration_data)/5
 #use solver to get the CMFR parameters
 trial4_CMFR = epa.Solver_CMFR_N(trial4_time_data, trial4_concentration_data, trial4_theta_hydraulic, trial4_C_bar_guess)
 trial4_CMFR.C_bar
