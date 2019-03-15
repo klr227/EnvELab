@@ -34,11 +34,11 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
 
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
-
-CMFR: Pe = n/a , N= 1.00
-One Baffle: Pe = 5 , N = 1.801
+make table here lol
+CMFR: Pe = N/A , N= 1.00
+Trial 1: Pe = 5 , N = 1.80
 Trial 2: Pe = 5, N = 2.17
-Trial 3: Pe = 5, N = 2.210
+Trial 3: Pe = 5, N = 2.21
 Trial 4: Pe = 5; N = 3.37
 
 
