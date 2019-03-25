@@ -33,12 +33,21 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 
 ###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
 
+![]https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/E_F_Trial1_Graph.png
+
+![]https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/E_F_Trial2_Graph.png
+
+![]https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/E_F_Trial3_Graph.png
+
+![]https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/E_F_Trial4_Graph.png
+
+
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
-make table here lol
-CMFR: Pe = N/A , N= 1.00
-Trial 1: Pe = 5 , N = 1.80
+
+CMFR: Pe = n/a , N= 1.00
+One Baffle: Pe = 5 , N = 1.801
 Trial 2: Pe = 5, N = 2.17
-Trial 3: Pe = 5, N = 2.21
+Trial 3: Pe = 5, N = 2.210
 Trial 4: Pe = 5; N = 3.37
 
 
@@ -68,16 +77,24 @@ from pathlib import Path
 from random import *
 import aguaclara.core.utility as ut
 
+
+#Concentration of tracer and volume of tracer added
+C_tr = 30 * u.mg/u.L
+V_tr = 300 * u.uL
+
+#Density of water
+density_H2O = 997 *u.g/u.L
+
 #CMFR
 CMFR_path = "https://raw.githubusercontent.com/klr227/EnvELab/master/Reactor_Characteristics/red_dye_30_trial1.tsv"
 CMFR_firstrow = epa.notes(CMFR_path).last_valid_index() + 1
 CMFR_firstrow = CMFR_firstrow + 10
 CMFR_time_data = (epa.column_of_time(CMFR_path,CMFR_firstrow,-1)).to(u.s)
 CMFR_concentration_data = epa.column_of_data(CMFR_path,CMFR_firstrow,1,-1,'mg/L')
+CMFR_concentration_data
 
 #Used measured mass of water in the tank in CMFR experiment
 CMFR_mass = 1646 *u.g
-density_H2O = 997 *u.g/u.L
 CMFR_V = CMFR_mass/density_H2O
 CMFR_Q = 380 * u.mL/u.min
 
@@ -89,24 +106,23 @@ CMFR_C_bar_guess = np.max(CMFR_concentration_data)
 #residence time, and number of reactors in series.
 #This experiment was for a single reactor and so we expect N to be 1!
 CMFR_CMFR = epa.Solver_CMFR_N(CMFR_time_data, CMFR_concentration_data, CMFR_theta_hydraulic, CMFR_C_bar_guess)
-CMFR_CMFR
 #use dot notation to get the 3 elements of the tuple that are in CMFR.
 
-print('The model estimated mass of tracer injected was',ut.round_sf(CMFR_CMFR.C_bar*CMFR_V ,2) )
+print('The model estimated mass of tracer injected was',CMFR_CMFR.C_bar*CMFR_V)
 print('The model estimate of the number of reactors in series was', CMFR_CMFR.N)
-print('The tracer residence time was',ut.round_sf(CMFR_CMFR.theta ,2))
+print('The tracer residence time was',CMFR_CMFR.theta)
 print('The ratio of tracer to hydraulic residence time was',(CMFR_CMFR.theta/CMFR_theta_hydraulic).magnitude)
 
 #create a model curve given the curve fit parameters.
 
 CMFR_CMFR_model = CMFR_CMFR.C_bar * epa.E_CMFR_N(CMFR_time_data/CMFR_CMFR.theta,CMFR_CMFR.N)
-plt.plot(CMFR_time_data.to(u.min), CMFR_concentration_data.to(u.mg/u.L),'ro')
+plt.plot(CMFR_time_data.to(u.min), CMFR_concentration_data,'ro')
 plt.plot(CMFR_time_data.to(u.min), CMFR_CMFR_model,'b')
 
 plt.xlabel(r'$time (min)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model'])
-#plt.savefig('Reactor_Characteristics/CMFR.png', bbox_inches = 'tight')
+plt.savefig('Reactor_Characteristics/CMFR.png', bbox_inches = 'tight')
 plt.show()
 
 
@@ -151,13 +167,8 @@ one_baffle_AD.C_bar
 one_baffle_AD.Pe
 one_baffle_AD.theta
 
-print('The model estimated mass of tracer injected was',ut.round_sf(one_baffle_AD.C_bar*one_baffle_V ,2) )
-print('The model estimate of the Peclet number was', one_baffle_AD.Pe)
-print('The tracer residence time was',ut.round_sf(one_baffle_AD.theta ,2))
-print('The ratio of tracer to hydraulic residence time was',(one_baffle_AD.theta/one_baffle_theta_hydraulic).magnitude)
-
 #Create the advection dispersion model curve based on the solver parameters
-one_baffle_AD_model = (one_baffle_AD.C_bar*epa.E_Advective_Dispersion((one_baffle_time_data/one_baffle_AD.theta).to_base_units(), one_baffle_AD.Pe)).to(u.mg/u.L)
+one_baffle_AD_model = (one_baffle_AD.C_bar*epa.E_Advective_Dispersion((one_baffle_time_data/one_baffle_AD.theta).to(u.dimensionless), one_baffle_AD.Pe)).to(u.mg/u.L)
 
 #Plot the data and the two model curves.
 plt.plot(one_baffle_time_data.to(u.s), one_baffle_concentration_data.to(u.mg/u.L),'ro')
@@ -166,7 +177,7 @@ plt.plot(one_baffle_time_data.to(u.s), one_baffle_AD_model,'g')
 plt.xlabel(r'$time (min)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model', 'AD Model'])
-plt.savefig('Reactor_Characteristics/Dispersion.png', bbox_inches = 'tight')
+plt.savefig('Reactor_Characteristics/One_baffle_graph_model.png', bbox_inches = 'tight')
 plt.show()
 
 
@@ -191,7 +202,7 @@ trial2_mass = 1537 *u.g
 trial2_V = trial2_mass/density_H2O
 trial2_Q = 380 * u.mL/u.min
 trial2_theta_hydraulic = (trial2_V/trial2_Q).to(u.s)
-trial2_C_bar_guess = np.max(trial2_concentration_data)/3
+trial2_C_bar_guess = np.max(trial2_concentration_data)/2
 #use solver to get the CMFR parameters
 trial2_CMFR = epa.Solver_CMFR_N(trial2_time_data, trial2_concentration_data, trial2_theta_hydraulic, trial2_C_bar_guess)
 trial2_CMFR.C_bar
@@ -212,11 +223,6 @@ trial2_AD.C_bar
 trial2_AD.Pe
 trial2_AD.theta
 
-print('The model estimated mass of tracer injected was',ut.round_sf(trial2_AD.C_bar*trial2_V ,2) )
-print('The model estimate of the Peclet number was', trial2_AD.Pe)
-print('The tracer residence time was',ut.round_sf(trial2_AD.theta ,2))
-print('The ratio of tracer to hydraulic residence time was',(trial2_AD.theta/trial2_theta_hydraulic).magnitude)
-
 #Create the advection dispersion model curve based on the solver parameters
 trial2_AD_model = (trial2_AD.C_bar*epa.E_Advective_Dispersion((trial2_time_data/trial2_AD.theta).to_base_units(), trial2_AD.Pe)).to(u.mg/u.L)
 
@@ -227,7 +233,7 @@ plt.plot(trial2_time_data.to(u.s), trial2_AD_model,'g')
 plt.xlabel(r'$time (min)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model', 'AD Model'])
-plt.savefig('Reactor_Characteristics/Dispersion.png', bbox_inches = 'tight')
+plt.savefig('Reactor_Characteristics/Trial_2_graph_model.png', bbox_inches = 'tight')
 plt.show()
 
 
@@ -238,7 +244,7 @@ trial3_time_data = (epa.column_of_time(trial3_path,trial3_firstrow,-1)).to(u.s)
 trial3_concentration_data = epa.column_of_data(trial3_path,trial3_firstrow,1,-1,'mg/L')
 
 #I noticed that the initial concentration measured by the photometer wasn't
-#zero. This suggests that there may have been a small air bubble in the
+#zero. This suggests that th`ere may have been a small air bubble in the
 #photometer or perhaps there was some other anomaly that was causing the
 #photometer to read a concentration that was higher than was actually present in
 #the reactor. To correct for this I subtracted the initial concentration reading
@@ -251,6 +257,7 @@ trial3_V = trial3_mass/density_H2O
 trial3_Q = 380 * u.mL/u.min
 trial3_theta_hydraulic = (trial3_V/trial3_Q).to(u.s)
 trial3_C_bar_guess = np.max(trial3_concentration_data)/4
+trial3_C_bar_guess = np.average(trial3_concentration_data)* u.mg/u.L
 #use solver to get the CMFR parameters
 trial3_CMFR = epa.Solver_CMFR_N(trial3_time_data, trial3_concentration_data, trial3_theta_hydraulic, trial3_C_bar_guess)
 trial3_CMFR.C_bar
@@ -266,15 +273,11 @@ trial3_CMFR.theta.to(u.s)
 trial3_CMFR_model = (trial3_CMFR.C_bar*epa.E_CMFR_N(trial3_time_data/trial3_CMFR.theta, trial3_CMFR.N)).to(u.mg/u.L)
 
 #use solver to get the advection dispersion parameters
-trial3_AD = epa.Solver_AD_Pe(trial3_time_data, trial3_concentration_data, trial3_theta_hydraulic, trial3_C_bar_guess)
+trial3_AD = epa.Solver_AD_Pe(trial3_time_data, trial3_concentration_data, 200*u.s, trial3_C_bar_guess)
 trial3_AD.C_bar
 trial3_AD.Pe
 trial3_AD.theta
 
-print('The model estimated mass of tracer injected was',ut.round_sf(trial3_AD.C_bar*trial3_V ,2) )
-print('The model estimate of the Peclet number was', trial3_AD.Pe)
-print('The tracer residence time was',ut.round_sf(trial3_AD.theta ,2))
-print('The ratio of tracer to hydraulic residence time was',(trial3_AD.theta/trial3_theta_hydraulic).magnitude)
 
 #Create the advection dispersion model curve based on the solver parameters
 trial3_AD_model = (trial3_AD.C_bar*epa.E_Advective_Dispersion((trial3_time_data/trial3_AD.theta).to_base_units(), trial3_AD.Pe)).to(u.mg/u.L)
@@ -286,7 +289,7 @@ plt.plot(trial3_time_data.to(u.s), trial3_AD_model,'g')
 plt.xlabel(r'$time (min)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model', 'AD Model'])
-plt.savefig('Reactor_Characteristics/Dispersion.png', bbox_inches = 'tight')
+plt.savefig('Reactor_Characteristics/Trial_3_graph_model.png', bbox_inches = 'tight')
 plt.show()
 
 
@@ -331,11 +334,6 @@ trial4_AD.C_bar
 trial4_AD.Pe
 trial4_AD.theta
 
-print('The model estimated mass of tracer injected was',ut.round_sf(trial4_AD.C_bar*trial2_V ,2) )
-print('The model estimate of the Peclet number was', trial4_AD.Pe)
-print('The tracer residence time was',ut.round_sf(trial4_AD.theta ,2))
-print('The ratio of tracer to hydraulic residence time was',(trial4_AD.theta/trial4_theta_hydraulic).magnitude)
-
 #Create the advection dispersion model curve based on the solver parameters
 trial4_AD_model = (trial4_AD.C_bar*epa.E_Advective_Dispersion((trial4_time_data/trial4_AD.theta).to_base_units(), trial4_AD.Pe)).to(u.mg/u.L)
 
@@ -346,5 +344,193 @@ plt.plot(trial4_time_data.to(u.s), trial4_AD_model,'g')
 plt.xlabel(r'$time (min)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model', 'AD Model'])
-plt.savefig('Reactor_Characteristics/Dispersion.png', bbox_inches = 'tight')
+plt.savefig('Reactor_Characteristics/Trial_4_Graph_model.png', bbox_inches = 'tight')
 plt.show()
+
+E1 = ((one_baffle_concentration_data*one_baffle_V)/(C_tr*V_tr)).to(u.dimensionless)
+t1_star = one_baffle_time_data/one_baffle_AD.theta
+
+F1 = []
+for i in range(t1_star.size):
+  integration = np.trapz(E1[0:i],t1_star[0:i])
+  F1.append(integration)
+
+F1
+F1max = F1[t1_star.size-1]
+F1_10 = .1*F1max
+index_1 = 0
+#while value < F1_10:
+F1[13]
+
+for i in range(t1_star.size):
+  if F1[i] < F1_10:
+    index_1 = i + 1
+  else:
+    break
+
+t1_star_10 = t1_star[index_1]
+
+
+fig, ax1 = plt.subplots()
+color = 'tab:red'
+ax1.set_xlabel('time (s)')
+ax1.set_ylabel('E', color=color)
+ax1.plot(t1_star, E1, color=color)
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
+ax2.plot(t1_star, F1, color=color)
+ax2.tick_params(axis='y', labelcolor=color)
+ax2.annotate('t⋆ at F = 0.1' , xy=(t1_star_10, F1[index_1]), xytext=(1, 7.5),
+            arrowprops=dict(facecolor='black', shrink=1))
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.savefig('Reactor_Characteristics/E_F_Trial1_Graph.png', bbox_inches = 'tight')
+plt.show()
+E2 = ((trial2_concentration_data*trial2_V)/(C_tr*V_tr)).to(u.dimensionless)
+t2_star = trial2_time_data/trial2_AD.theta
+
+F2 = []
+for i in range(t2_star.size):
+  integration = np.trapz(E2[0:i],t2_star[0:i])
+  F2.append(integration)
+
+F2max = F2[t2_star.size-1]
+F2_10 = .1*F2max
+index_2 = 0
+#while value < F1_10:
+
+for i in range(t2_star.size):
+  if F2[i] < F2_10:
+    index_2 = i + 1
+  else:
+    break
+
+t2_star_10 = t2_star[index_2]
+
+fig, ax1 = plt.subplots()
+color = 'tab:red'
+ax1.set_xlabel('time (s)')
+ax1.set_ylabel('E', color=color)
+ax1.plot(t2_star, E2, color=color)
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
+ax2.plot(t2_star, F2, color=color)
+ax2.tick_params(axis='y', labelcolor=color)
+ax2.annotate('t⋆ at F = 0.1' , xy=(t2_star_10, F2[index_2]), xytext=(1, 7.5),
+            arrowprops=dict(facecolor='black', shrink=1))
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.savefig('Reactor_Characteristics/E_F_Trial2_Graph.png', bbox_inches = 'tight')
+plt.show()
+
+E3 = (trial3_concentration_data*trial3_V/(C_tr*V_tr)).to(u.dimensionless)
+t3_star = trial3_time_data/trial3_AD.theta
+F3 = []
+for i in range(t3_star.size):
+  integration = np.trapz(E3[0:i],t3_star[0:i])
+  F3.append(integration)
+
+F3max = F3[t3_star.size-1]
+F3_10 = .1*F3max
+index_3 = 0
+#while value < F1_10:
+
+for i in range(t3_star.size):
+  if F3[i] < F3_10:
+    index_3 = i + 1
+  else:
+    break
+t3_star_10 = t3_star[index_3]
+
+fig, ax1 = plt.subplots()
+color = 'tab:red'
+ax1.set_xlabel('time (s)')
+ax1.set_ylabel('E', color=color)
+ax1.plot(t3_star, E3, color=color)
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
+ax2.plot(t3_star, F3, color=color)
+ax2.tick_params(axis='y', labelcolor=color)
+ax2.annotate('t⋆ at F = 0.1' , xy=(t3_star_10, F3[index_3]), xytext=(1, 7.5),
+            arrowprops=dict(facecolor='black', shrink=1))
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.savefig('Reactor_Characteristics/E_F_Trial3_Graph.png', bbox_inches = 'tight')
+plt.show()
+
+E4 = (trial4_concentration_data*trial4_V/(C_tr*V_tr)).to(u.dimensionless)
+t4_star = trial4_time_data/trial4_AD.theta
+F4 = []
+for i in range(t4_star.size):
+  timedata = t4_star[0:i]
+  integration = np.trapz(E4[0:i],timedata)
+  F4.append(integration)
+
+F4max = F4[t4_star.size-1]
+F4_10 = .1*F4max
+index_4= 0
+#while value < F1_10:
+
+for i in range(t4_star.size):
+  if F4[i] < F4_10:
+    index_4 = i + 1
+  else:
+    break
+
+t4_star_10 = t4_star[index_4]
+
+fig, ax1 = plt.subplots()
+color = 'tab:red'
+ax1.set_xlabel('time (s)')
+ax1.set_ylabel('E', color=color)
+ax1.plot(t4_star, E4, color=color)
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
+ax2.plot(t4_star, F4, color=color)
+ax2.tick_params(axis='y', labelcolor=color)
+ax2.annotate('t⋆ at F = 0.1' , xy=(t4_star_10, F4[index_4]), xytext=(1, 7.5),
+            arrowprops=dict(facecolor='black', shrink=1))
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.savefig('Reactor_Characteristics/E_F_Trial4_Graph.png', bbox_inches = 'tight')
+plt.show()
+
+print('THE FOLLOWING INFORMATION IS FOR OUR EXPERIMENT WITH 1 BAFFLE WITH SEVERAL HOLES EQUALLY SPACED')
+print('The model estimated mass of tracer injected was',one_baffle_AD.C_bar*one_baffle_V )
+print('The model estimate of the Peclet number was', one_baffle_AD.Pe)
+print('The tracer residence time was',one_baffle_AD.theta)
+print('The ratio of tracer to hydraulic residence time was',(one_baffle_AD.theta/one_baffle_theta_hydraulic).magnitude)
+print('The values of t⋆ at F = 0.1 for this experiment is',t1_star_10)
+print('')
+print('THE FOLLOWING INFORMATION IS FOR OUR EXPERIMENT WITH 1 BAFFLES WITH A GAP ON ONE END')
+print('The model estimated mass of tracer injected was',trial2_AD.C_bar*trial2_V)
+print('The model estimate of the Peclet number was', trial2_AD.Pe)
+print('The tracer residence time was',trial2_AD.theta)
+print('The ratio of tracer to hydraulic residence time was',(trial2_AD.theta/trial2_theta_hydraulic).magnitude)
+print('The values of t⋆ at F = 0.1 for this experiment is',t2_star_10)
+print('')
+print('THE FOLLOWING INFORMATION IS FOR OUR EXPERIMENT WITH 3 BAFFLES')
+print('The model estimated mass of tracer injected was',trial3_AD.C_bar*trial3_V)
+print('The model estimate of the Peclet number was', trial3_AD.Pe)
+print('The tracer residence time was',trial3_AD.theta)
+print('The ratio of tracer to hydraulic residence time was',(trial3_AD.theta/trial3_theta_hydraulic).magnitude)
+print('The values of t⋆ at F = 0.1 for this experiment is',t3_star_10)
+print('')
+print('THE FOLLOWING INFORMATION IS FOR OUR EXPERIMENT WITH 4 BAFFLES')
+print('The model estimated mass of tracer injected was',trial4_AD.C_bar*trial4_V)
+print('The model estimate of the Peclet number was', trial4_AD.Pe)
+print('The tracer residence time was',trial4_AD.theta)
+print('The ratio of tracer to hydraulic residence time was',(trial4_AD.theta/trial4_theta_hydraulic).magnitude)
+print('The values of t⋆ at F = 0.1 for this experiment is',t4_star_10)
