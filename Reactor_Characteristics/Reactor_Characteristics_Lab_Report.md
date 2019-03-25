@@ -180,7 +180,48 @@ plt.legend(['Measured dye','CMFR Model', 'AD Model'])
 plt.savefig('Reactor_Characteristics/One_baffle_graph_model.png', bbox_inches = 'tight')
 plt.show()
 
+E1 = ((one_baffle_concentration_data*one_baffle_V)/(C_tr*V_tr)).to(u.dimensionless)
+t1_star = one_baffle_time_data/one_baffle_AD.theta
 
+F1 = []
+for i in range(t1_star.size):
+  integration = np.trapz(E1[0:i],t1_star[0:i])
+  F1.append(integration)
+
+F1
+F1max = F1[t1_star.size-1]
+F1_10 = .1*F1max
+index_1 = 0
+#while value < F1_10:
+F1[13]
+
+for i in range(t1_star.size):
+  if F1[i] < F1_10:
+    index_1 = i + 1
+  else:
+    break
+
+t1_star_10 = t1_star[index_1]
+
+
+fig, ax1 = plt.subplots()
+color = 'tab:red'
+ax1.set_xlabel('t⋆')
+ax1.set_ylabel('E', color=color)
+ax1.plot(t1_star, E1, color=color)
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
+ax2.plot(t1_star, F1, color=color)
+ax2.tick_params(axis='y', labelcolor=color)
+ax2.annotate('t⋆ at F = 0.1' , xy=(t1_star_10, F1[index_1]), xytext=(1, 7.5),
+            arrowprops=dict(facecolor='black', shrink=1))
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.savefig('Reactor_Characteristics/E_F_Trial1_Graph.png', bbox_inches = 'tight')
+plt.show()
 
 #Load a data file for a reactor with baffles trial 2 (1 baffle with gap).
 
@@ -236,7 +277,45 @@ plt.legend(['Measured dye','CMFR Model', 'AD Model'])
 plt.savefig('Reactor_Characteristics/Trial_2_graph_model.png', bbox_inches = 'tight')
 plt.show()
 
+E2 = ((trial2_concentration_data*trial2_V)/(C_tr*V_tr)).to(u.dimensionless)
+t2_star = trial2_time_data/trial2_AD.theta
 
+F2 = []
+for i in range(t2_star.size):
+  integration = np.trapz(E2[0:i],t2_star[0:i])
+  F2.append(integration)
+
+F2max = F2[t2_star.size-1]
+F2_10 = .1*F2max
+index_2 = 0
+#while value < F1_10:
+
+for i in range(t2_star.size):
+  if F2[i] < F2_10:
+    index_2 = i + 1
+  else:
+    break
+
+t2_star_10 = t2_star[index_2]
+
+fig, ax1 = plt.subplots()
+color = 'tab:red'
+ax1.set_xlabel('t⋆')
+ax1.set_ylabel('E', color=color)
+ax1.plot(t2_star, E2, color=color)
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
+ax2.plot(t2_star, F2, color=color)
+ax2.tick_params(axis='y', labelcolor=color)
+ax2.annotate('t⋆ at F = 0.1' , xy=(t2_star_10, F2[index_2]), xytext=(1, 7.5),
+            arrowprops=dict(facecolor='black', shrink=1))
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.savefig('Reactor_Characteristics/E_F_Trial2_Graph.png', bbox_inches = 'tight')
+plt.show()
 #trial 3 - 3 baffles
 trial3_path = 'https://raw.githubusercontent.com/klr227/EnvELab/master/Reactor_Characteristics/baffle_test_3.xls'
 trial3_firstrow = epa.notes(trial3_path).last_valid_index() + 1
@@ -292,8 +371,43 @@ plt.legend(['Measured dye','CMFR Model', 'AD Model'])
 plt.savefig('Reactor_Characteristics/Trial_3_graph_model.png', bbox_inches = 'tight')
 plt.show()
 
+E3 = (trial3_concentration_data*trial3_V/(C_tr*V_tr)).to(u.dimensionless)
+t3_star = trial3_time_data/trial3_AD.theta
+F3 = []
+for i in range(t3_star.size):
+  integration = np.trapz(E3[0:i],t3_star[0:i])
+  F3.append(integration)
 
+F3max = F3[t3_star.size-1]
+F3_10 = .1*F3max
+index_3 = 0
+#while value < F1_10:
 
+for i in range(t3_star.size):
+  if F3[i] < F3_10:
+    index_3 = i + 1
+  else:
+    break
+t3_star_10 = t3_star[index_3]
+
+fig, ax1 = plt.subplots()
+color = 'tab:red'
+ax1.set_xlabel('t⋆')
+ax1.set_ylabel('E', color=color)
+ax1.plot(t3_star, E3, color=color)
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
+ax2.plot(t3_star, F3, color=color)
+ax2.tick_params(axis='y', labelcolor=color)
+ax2.annotate('t⋆ at F = 0.1' , xy=(t3_star_10, F3[index_3]), xytext=(1, 7.5),
+            arrowprops=dict(facecolor='black', shrink=1))
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.savefig('Reactor_Characteristics/E_F_Trial3_Graph.png', bbox_inches = 'tight')
+plt.show()
 ##Load a data file for a reactor with baffles trial 4 (4 baffles with gap).
 trial4_path = 'https://raw.githubusercontent.com/klr227/EnvELab/master/Reactor_Characteristics/baffle_test_4.xls'
 trial4_firstrow = epa.notes(trial4_path).last_valid_index() + 1
@@ -347,126 +461,6 @@ plt.legend(['Measured dye','CMFR Model', 'AD Model'])
 plt.savefig('Reactor_Characteristics/Trial_4_Graph_model.png', bbox_inches = 'tight')
 plt.show()
 
-E1 = ((one_baffle_concentration_data*one_baffle_V)/(C_tr*V_tr)).to(u.dimensionless)
-t1_star = one_baffle_time_data/one_baffle_AD.theta
-
-F1 = []
-for i in range(t1_star.size):
-  integration = np.trapz(E1[0:i],t1_star[0:i])
-  F1.append(integration)
-
-F1
-F1max = F1[t1_star.size-1]
-F1_10 = .1*F1max
-index_1 = 0
-#while value < F1_10:
-F1[13]
-
-for i in range(t1_star.size):
-  if F1[i] < F1_10:
-    index_1 = i + 1
-  else:
-    break
-
-t1_star_10 = t1_star[index_1]
-
-
-fig, ax1 = plt.subplots()
-color = 'tab:red'
-ax1.set_xlabel('time (s)')
-ax1.set_ylabel('E', color=color)
-ax1.plot(t1_star, E1, color=color)
-ax1.tick_params(axis='y', labelcolor=color)
-
-ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
-
-color = 'tab:blue'
-ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
-ax2.plot(t1_star, F1, color=color)
-ax2.tick_params(axis='y', labelcolor=color)
-ax2.annotate('t⋆ at F = 0.1' , xy=(t1_star_10, F1[index_1]), xytext=(1, 7.5),
-            arrowprops=dict(facecolor='black', shrink=1))
-fig.tight_layout()  # otherwise the right y-label is slightly clipped
-plt.savefig('Reactor_Characteristics/E_F_Trial1_Graph.png', bbox_inches = 'tight')
-plt.show()
-E2 = ((trial2_concentration_data*trial2_V)/(C_tr*V_tr)).to(u.dimensionless)
-t2_star = trial2_time_data/trial2_AD.theta
-
-F2 = []
-for i in range(t2_star.size):
-  integration = np.trapz(E2[0:i],t2_star[0:i])
-  F2.append(integration)
-
-F2max = F2[t2_star.size-1]
-F2_10 = .1*F2max
-index_2 = 0
-#while value < F1_10:
-
-for i in range(t2_star.size):
-  if F2[i] < F2_10:
-    index_2 = i + 1
-  else:
-    break
-
-t2_star_10 = t2_star[index_2]
-
-fig, ax1 = plt.subplots()
-color = 'tab:red'
-ax1.set_xlabel('time (s)')
-ax1.set_ylabel('E', color=color)
-ax1.plot(t2_star, E2, color=color)
-ax1.tick_params(axis='y', labelcolor=color)
-
-ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
-
-color = 'tab:blue'
-ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
-ax2.plot(t2_star, F2, color=color)
-ax2.tick_params(axis='y', labelcolor=color)
-ax2.annotate('t⋆ at F = 0.1' , xy=(t2_star_10, F2[index_2]), xytext=(1, 7.5),
-            arrowprops=dict(facecolor='black', shrink=1))
-fig.tight_layout()  # otherwise the right y-label is slightly clipped
-plt.savefig('Reactor_Characteristics/E_F_Trial2_Graph.png', bbox_inches = 'tight')
-plt.show()
-
-E3 = (trial3_concentration_data*trial3_V/(C_tr*V_tr)).to(u.dimensionless)
-t3_star = trial3_time_data/trial3_AD.theta
-F3 = []
-for i in range(t3_star.size):
-  integration = np.trapz(E3[0:i],t3_star[0:i])
-  F3.append(integration)
-
-F3max = F3[t3_star.size-1]
-F3_10 = .1*F3max
-index_3 = 0
-#while value < F1_10:
-
-for i in range(t3_star.size):
-  if F3[i] < F3_10:
-    index_3 = i + 1
-  else:
-    break
-t3_star_10 = t3_star[index_3]
-
-fig, ax1 = plt.subplots()
-color = 'tab:red'
-ax1.set_xlabel('time (s)')
-ax1.set_ylabel('E', color=color)
-ax1.plot(t3_star, E3, color=color)
-ax1.tick_params(axis='y', labelcolor=color)
-
-ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
-
-color = 'tab:blue'
-ax2.set_ylabel('F', color=color)  # we already handled the x-label with ax1
-ax2.plot(t3_star, F3, color=color)
-ax2.tick_params(axis='y', labelcolor=color)
-ax2.annotate('t⋆ at F = 0.1' , xy=(t3_star_10, F3[index_3]), xytext=(1, 7.5),
-            arrowprops=dict(facecolor='black', shrink=1))
-fig.tight_layout()  # otherwise the right y-label is slightly clipped
-plt.savefig('Reactor_Characteristics/E_F_Trial3_Graph.png', bbox_inches = 'tight')
-plt.show()
-
 E4 = (trial4_concentration_data*trial4_V/(C_tr*V_tr)).to(u.dimensionless)
 t4_star = trial4_time_data/trial4_AD.theta
 F4 = []
@@ -490,7 +484,7 @@ t4_star_10 = t4_star[index_4]
 
 fig, ax1 = plt.subplots()
 color = 'tab:red'
-ax1.set_xlabel('time (s)')
+ax1.set_xlabel('t⋆')
 ax1.set_ylabel('E', color=color)
 ax1.plot(t4_star, E4, color=color)
 ax1.tick_params(axis='y', labelcolor=color)
