@@ -33,13 +33,13 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 
 ###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
 
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/E_F_Trial1_Graph.png)
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial1_Graph.png)
 
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/E_F_Trial2_Graph.png
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial2_Graph.png
 )
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/E_F_Trial3_Graph.png
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial3_Graph.png
 )
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/E_F_Trial4_Graph.png
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial4_Graph.png
 )
 
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
