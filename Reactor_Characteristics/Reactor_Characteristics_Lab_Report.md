@@ -29,7 +29,7 @@ Three baffles were placed such that the reactor consisted of four equal sized su
 Four baffles were placed such that the reactor consisted of five equal sized sub-sections, each 6 centimeters in length. The baffles each had a gap on one side of the tank, and the baffles were arranged so that the gaps were on opposite sides from the adjacent baffle gaps.  
 
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5452.JPG)  
-
+***
 ##Results and Discussion:  
 ###1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.  
 
@@ -51,17 +51,18 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
 
 CMFR: Pe = n/a , N= 1.00
-One Baffle: Pe = 1.741 , N = 1.801
-Trial 2: Pe = 2.288, N = 2.17
-Trial 3: Pe = 2.464, N = 2.210
-Trial 4: Pe = 4.762; N = 3.37
+One Baffle w/ 5mm holes: Pe = 1.741 , N = 1.801
+
+Two Baffles: Pe = 2.288, N = 2.17
+Three Baffles: Pe = 2.464, N = 2.210
+Four Baffles: Pe = 4.762; N = 3.37
 
 
 ###4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?
-One Baffle: t⋆ = 0.4396
-Trial 2: t⋆ = 0.4637
-Trial 3: t⋆ = 0.4857
-Trial 4: t⋆ = 0.5463
+One Baffle w/ 5mm holes: t⋆ = 0.4396
+Two Baffles: t⋆ = 0.4637
+Three Baffles: t⋆ = 0.4857
+Four Baffles: t⋆ = 0.5463
 
 ###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.
 
