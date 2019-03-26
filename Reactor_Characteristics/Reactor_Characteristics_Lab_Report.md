@@ -1,6 +1,6 @@
 #Reactor Characteristics  
 ##Group 7:  
-Ken Rivero Rivera - 3 hours  
+Ken Rivero Rivera - 12 hours  
 Catherine Johnson - 3 hours  
 ***
 ##Introduction:  
