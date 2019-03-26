@@ -3,11 +3,11 @@
 Ken Rivero Rivera - 3 hours
 Catherine Johnson - 3 hours
 ##Introduction:
-In water and wastewater treatment plants, chlorine is used to disinfect water in contact tanks. In order to maximize the effectiveness of the disinfecting process, the time the water spends in the tank must also be maximized. This allows for a better chance that bacteria and other pathogens in the water will be neutralized. This lab experiment is a tracer study, which are used to understand the characteristics of different reactor apparatuses.
+In water and wastewater treatment plants, chlorine is used to disinfect water in contact tanks. In order to maximize the effectiveness of the disinfecting process, the time the water spends in the tank must also be maximized. This allows for a better chance that bacteria and other pathogens in the water will be neutralized. This lab experiment is a tracer study, which are used to understand the characteristics of different reactor apparatuses.  
 ##Objectives:
-The purpose of this lab is to maximize the time that water spends in the reactor and to understand how the addition of barriers and baffles effects flow and dispersion in a reactor.
+The purpose of this lab is to maximize the time that water spends in the reactor and to understand how the addition of barriers and baffles effects flow and dispersion in a reactor.  
 ##Procedures:
-A 1 foot long reactor was set up to receive water from a reservoir via peristaltic pump with a flow rate of 380 mg/L (100rpm). The peristaltic pump was also used to retrieve water in the tank near the outlet and send through the photometer. The first experiment was modelling a CMFR. This was an open tank with a stir bar. The remaining experiments were a series of baffle configurations that can be seen below.
+A 1 foot long reactor was set up to receive water from a reservoir via peristaltic pump with a flow rate of 380 mg/L (100rpm). The peristaltic pump was also used to retrieve water in the tank near the outlet and send through the photometer. The first experiment was modelling a CMFR. This was an open tank with a stir bar. The remaining experiments were a series of baffle configurations that can be seen below.  
 ####Configuration 1:
 One baffle with small holes (5mm diameter) was placed in the middle of the reactor. These holes were arranged such that there were 6 holes horizontally per row, and 4 holes vertically per column. Only the bottom two rows were submerged in the water in this experiment, meaning the flow was through 12 holes.  
 
@@ -31,16 +31,20 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ##Results and Discussion:
 ###1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
 
-###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.
+###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.  
 
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial1_Graph.png)
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial1_Graph.png)  
+**E & F graph for experiment with one baffle with multiple holes equally spaced**  
 
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial2_Graph.png
-)
+)  
+**E & F graph for experiment with two baffles**  
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial3_Graph.png
-)
+)  
+**E & F graph for experiment with three baffles**  
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial4_Graph.png
-)
+)  
+**E & F graph for experiment with four baffles**
 
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
 
@@ -52,6 +56,10 @@ Trial 4: Pe = 4.762; N = 3.37
 
 
 ###4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?
+One Baffle: t⋆ = 0.4396
+Trial 2: t⋆ = 0.4637
+Trial 3: t⋆ = 0.4857
+Trial 4: t⋆ = 0.5463
 
 ###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.
 
