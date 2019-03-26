@@ -35,18 +35,18 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 
 ###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.  
 
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial1_Graph.png)  
-**E & F graph for experiment with one baffle with multiple holes equally spaced**  
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/One_baffle_graph_model.png)  
+**Graph of CMFR and AD models compared with data from experiment with one baffle with 5 mm diameter holes**
 
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial2_Graph.png
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Trial_2_graph_model.png
 )  
-**E & F graph for experiment with two baffles**  
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial3_Graph.png
+**Graph of CMFR and AD models compared with data from experiment with two baffles**
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Trial_3_graph_model.png
 )  
-**E & F graph for experiment with three baffles**  
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/E_F_Trial4_Graph.png
+**Graph of CMFR and AD models compared with data from experiment with three baffles**
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Trial_4_Graph_model.png
 )  
-**E & F graph for experiment with four baffles**
+**Graph of CMFR and AD models compared with data from experiment with four baffles**
 
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
 
@@ -64,8 +64,8 @@ Two Baffles: t⋆ = 0.4637
 Three Baffles: t⋆ = 0.4857
 Four Baffles: t⋆ = 0.5463
 
-###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.
-
+###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.  
+The difference of the hydraulic residence time calculated with the flow rate and volume and the hydraulic residence time from the AD model is evidence of "dead volumes" in our reactors. The hydraulic residence time of the AD model is lower than the other one which can be attributed to dead volumes located in the reactor.
 ###6. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be
 
 ##Conclusion:
