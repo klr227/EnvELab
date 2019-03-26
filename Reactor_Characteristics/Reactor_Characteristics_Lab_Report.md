@@ -36,44 +36,44 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.  
 
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/One_baffle_graph_model.png)  
-**Graph of CMFR and AD models compared with data from experiment with one baffle with 5 mm diameter holes**
+**Graph of CMFR and AD models compared with data from experiment with one baffle with 5 mm diameter holes**  
 
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Trial_2_graph_model.png
 )  
 **Graph of CMFR and AD models compared with data from experiment with two baffles**
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Trial_3_graph_model.png
 )  
-**Graph of CMFR and AD models compared with data from experiment with three baffles**
+**Graph of CMFR and AD models compared with data from experiment with three baffles**  
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Trial_4_Graph_model.png
-)  
-**Graph of CMFR and AD models compared with data from experiment with four baffles**
+)   
+**Graph of CMFR and AD models compared with data from experiment with four baffles**  
 
-###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
+###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?  
 
-CMFR: Pe = n/a , N= 1.00
-One Baffle w/ 5mm holes: Pe = 1.741 , N = 1.801
+CMFR: Pe = n/a , N= 1.00  
+One Baffle w/ 5mm holes: Pe = 1.741 , N = 1.801  
 
-Two Baffles: Pe = 2.288, N = 2.17
-Three Baffles: Pe = 2.464, N = 2.210
-Four Baffles: Pe = 4.762; N = 3.37
+Two Baffles: Pe = 2.288, N = 2.17  
+Three Baffles: Pe = 2.464, N = 2.210  
+Four Baffles: Pe = 4.762; N = 3.37  
 
 
-###4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?
-One Baffle w/ 5mm holes: t⋆ = 0.4396
-Two Baffles: t⋆ = 0.4637
-Three Baffles: t⋆ = 0.4857
-Four Baffles: t⋆ = 0.5463
+###4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?  
+One Baffle w/ 5mm holes: t⋆ = 0.4396  
+Two Baffles: t⋆ = 0.4637  
+Three Baffles: t⋆ = 0.4857  
+Four Baffles: t⋆ = 0.5463  
 
-###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.  
-The difference of the hydraulic residence time calculated with the flow rate and volume and the hydraulic residence time from the AD model is evidence of "dead volumes" in our reactors. The hydraulic residence time of the AD model is lower than the other one which can be attributed to dead volumes located in the reactor.
-###6. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be
+###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.
+The difference of the hydraulic residence time calculated with the flow rate and volume and the hydraulic residence time from the AD model is evidence of "dead volumes" in our reactors. The hydraulic residence time of the AD model is lower than the other one which can be attributed to dead volumes located in the reactor.  
+###6. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be  
+***
+##Conclusion:  
 
-##Conclusion:
-
-##Suggestions:
-1. The first suggestion we have is straightforward - include in the instructions that the bigger tube in the peristaltic pump is for the influent not the effluent. A lot of people mixed those two around. Explicit direction in this step would save some time.
-2. The photometer is used to determine the concentration of red dye at the outlet, however it is not necessarily measuring what exactly leaves the reactor. In the CMFR simulation, it would because that is well mixed. However, when using the baffles, the flow is not well mixed. Therefore, the concentration of what is leaving in real time is not necessarily what is next to the outlet. Perhaps there is a way to attach the photometer to the outlet in the future.
-
+##Suggestions:  
+1. The first suggestion we have is straightforward - include in the instructions that the bigger tube in the peristaltic pump is for the influent not the effluent. A lot of people mixed those two around. Explicit direction in this step would save some time.  
+2. The photometer is used to determine the concentration of red dye at the outlet, however it is not necessarily measuring what exactly leaves the reactor. In the CMFR simulation, it would because that is well mixed. However, when using the baffles, the flow is not well mixed. Therefore, the concentration of what is leaving in real time is not necessarily what is next to the outlet. Perhaps there is a way to attach the photometer to the outlet in the future.  
+***
 ##Appendix:
 ```python
 from aguaclara.core.units import unit_registry as u
