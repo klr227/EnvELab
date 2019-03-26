@@ -45,10 +45,10 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?
 
 CMFR: Pe = n/a , N= 1.00
-One Baffle: Pe = 5 , N = 1.801
-Trial 2: Pe = 5, N = 2.17
-Trial 3: Pe = 5, N = 2.210
-Trial 4: Pe = 5; N = 3.37
+One Baffle: Pe = 1.741 , N = 1.801
+Trial 2: Pe = 2.288, N = 2.17
+Trial 3: Pe = 2.464, N = 2.210
+Trial 4: Pe = 4.762; N = 3.37
 
 
 ###4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?
@@ -81,7 +81,6 @@ import aguaclara.core.utility as ut
 #Concentration of tracer and volume of tracer added
 C_tr = 30 * u.mg/u.L
 V_tr = 300 * u.uL
-
 #Density of water
 density_H2O = 997 *u.g/u.L
 
@@ -174,7 +173,7 @@ one_baffle_AD_model = (one_baffle_AD.C_bar*epa.E_Advective_Dispersion((one_baffl
 plt.plot(one_baffle_time_data.to(u.s), one_baffle_concentration_data.to(u.mg/u.L),'ro')
 plt.plot(one_baffle_time_data.to(u.s), one_baffle_CMFR_model,'b')
 plt.plot(one_baffle_time_data.to(u.s), one_baffle_AD_model,'g')
-plt.xlabel(r'$time (min)$')
+plt.xlabel(r'$time (seconds)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model', 'AD Model'])
 plt.savefig('Reactor_Characteristics/One_baffle_graph_model.png', bbox_inches = 'tight')
@@ -182,18 +181,15 @@ plt.show()
 
 E1 = ((one_baffle_concentration_data*one_baffle_V)/(C_tr*V_tr)).to(u.dimensionless)
 t1_star = one_baffle_time_data/one_baffle_AD.theta
-
 F1 = []
 for i in range(t1_star.size):
   integration = np.trapz(E1[0:i],t1_star[0:i])
   F1.append(integration)
 
-F1
 F1max = F1[t1_star.size-1]
 F1_10 = .1*F1max
 index_1 = 0
 #while value < F1_10:
-F1[13]
 
 for i in range(t1_star.size):
   if F1[i] < F1_10:
@@ -271,7 +267,7 @@ trial2_AD_model = (trial2_AD.C_bar*epa.E_Advective_Dispersion((trial2_time_data/
 plt.plot(trial2_time_data.to(u.s), trial2_concentration_data.to(u.mg/u.L),'ro')
 plt.plot(trial2_time_data.to(u.s), trial2_CMFR_model,'b')
 plt.plot(trial2_time_data.to(u.s), trial2_AD_model,'g')
-plt.xlabel(r'$time (min)$')
+plt.xlabel(r'$time (seconds)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model', 'AD Model'])
 plt.savefig('Reactor_Characteristics/Trial_2_graph_model.png', bbox_inches = 'tight')
@@ -365,7 +361,7 @@ trial3_AD_model = (trial3_AD.C_bar*epa.E_Advective_Dispersion((trial3_time_data/
 plt.plot(trial3_time_data.to(u.s), trial3_concentration_data.to(u.mg/u.L),'ro')
 plt.plot(trial3_time_data.to(u.s), trial3_CMFR_model,'b')
 plt.plot(trial3_time_data.to(u.s), trial3_AD_model,'g')
-plt.xlabel(r'$time (min)$')
+plt.xlabel(r'$time (seconds)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model', 'AD Model'])
 plt.savefig('Reactor_Characteristics/Trial_3_graph_model.png', bbox_inches = 'tight')
@@ -388,6 +384,7 @@ for i in range(t3_star.size):
     index_3 = i + 1
   else:
     break
+
 t3_star_10 = t3_star[index_3]
 
 fig, ax1 = plt.subplots()
@@ -455,7 +452,7 @@ trial4_AD_model = (trial4_AD.C_bar*epa.E_Advective_Dispersion((trial4_time_data/
 plt.plot(trial4_time_data.to(u.s), trial4_concentration_data.to(u.mg/u.L),'ro')
 plt.plot(trial4_time_data.to(u.s), trial4_CMFR_model,'b')
 plt.plot(trial4_time_data.to(u.s), trial4_AD_model,'g')
-plt.xlabel(r'$time (min)$')
+plt.xlabel(r'$time (seconds)$')
 plt.ylabel(r'Concentration $\left ( \frac{mg}{L} \right )$')
 plt.legend(['Measured dye','CMFR Model', 'AD Model'])
 plt.savefig('Reactor_Characteristics/Trial_4_Graph_model.png', bbox_inches = 'tight')
