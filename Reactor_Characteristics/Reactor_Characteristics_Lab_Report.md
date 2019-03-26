@@ -1,35 +1,37 @@
-#Reactor Characteristics
-##Group 7:
-Ken Rivero Rivera - 3 hours
-Catherine Johnson - 3 hours
-##Introduction:
+#Reactor Characteristics  
+##Group 7:  
+Ken Rivero Rivera - 3 hours  
+Catherine Johnson - 3 hours  
+***
+##Introduction:  
 In water and wastewater treatment plants, chlorine is used to disinfect water in contact tanks. In order to maximize the effectiveness of the disinfecting process, the time the water spends in the tank must also be maximized. This allows for a better chance that bacteria and other pathogens in the water will be neutralized. This lab experiment is a tracer study, which are used to understand the characteristics of different reactor apparatuses.  
-##Objectives:
+***
+##Objectives:  
 The purpose of this lab is to maximize the time that water spends in the reactor and to understand how the addition of barriers and baffles effects flow and dispersion in a reactor.  
-##Procedures:
+##Procedures:  
 A 1 foot long reactor was set up to receive water from a reservoir via peristaltic pump with a flow rate of 380 mg/L (100rpm). The peristaltic pump was also used to retrieve water in the tank near the outlet and send through the photometer. The first experiment was modelling a CMFR. This was an open tank with a stir bar. The remaining experiments were a series of baffle configurations that can be seen below.  
-####Configuration 1:
-One baffle with small holes (5mm diameter) was placed in the middle of the reactor. These holes were arranged such that there were 6 holes horizontally per row, and 4 holes vertically per column. Only the bottom two rows were submerged in the water in this experiment, meaning the flow was through 12 holes.  
+####Configuration 1:  
+One baffle with small holes (5mm diameter) was placed in the middle of the reactor. These holes were arranged such that there were 6 holes horizontally per row, and 4 holes vertically per column. Only the bottom two rows were submerged in the water in this experiment, meaning the flow was through 12 holes.   
 
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_1047.JPG
-)
-####Configuration 2:
-Two baffles were placed such that the reactor consisted of three equal sized sub-sections, each 4 inches in length. The baffles each had a gap on one side of the tank, and the baffles were arranged so that the gaps were on opposite sides.
+)  
+####Configuration 2:  
+Two baffles were placed such that the reactor consisted of three equal sized sub-sections, each 4 inches in length. The baffles each had a gap on one side of the tank, and the baffles were arranged so that the gaps were on opposite sides.  
 
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5439.JPG
-)
-####Configuration 3:
-Three baffles were placed such that the reactor consisted of four equal sized sub-sections, each 3 inches in length. The baffles each had a gap on one side of the tank, and the baffles were arranged so that the gaps were on opposite sides from the adjacent baffle gaps.
+)  
+####Configuration 3:  
+Three baffles were placed such that the reactor consisted of four equal sized sub-sections, each 3 inches in length. The baffles each had a gap on one side of the tank, and the baffles were arranged so that the gaps were on opposite sides from the adjacent baffle gaps.  
 
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5448.JPG)
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5448.JPG)  
 
-####Configuration 4:
-Four baffles were placed such that the reactor consisted of five equal sized sub-sections, each 6 centimeters in length. The baffles each had a gap on one side of the tank, and the baffles were arranged so that the gaps were on opposite sides from the adjacent baffle gaps.
+####Configuration 4:  
+Four baffles were placed such that the reactor consisted of five equal sized sub-sections, each 6 centimeters in length. The baffles each had a gap on one side of the tank, and the baffles were arranged so that the gaps were on opposite sides from the adjacent baffle gaps.  
 
-![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5452.JPG)
+![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5452.JPG)  
 
-##Results and Discussion:
-###1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
+##Results and Discussion:  
+###1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.  
 
 ###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.  
 
