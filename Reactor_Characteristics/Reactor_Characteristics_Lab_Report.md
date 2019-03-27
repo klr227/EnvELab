@@ -1,7 +1,7 @@
 #Reactor Characteristics  
 ##Group 7:  
 Ken Rivero Rivera - 14 hours  
-Catherine Johnson - 3 hours  
+Catherine Johnson - 5 hours  
 ***
 ##Introduction:  
 In water and wastewater treatment plants, chlorine is used to disinfect water in contact tanks. In order to maximize the effectiveness of the disinfecting process, the time the water spends in the tank must also be maximized. This allows for a better chance that bacteria and other pathogens in the water will be neutralized. This lab experiment is a tracer study, which are used to understand the characteristics of different reactor apparatuses.  
@@ -31,9 +31,9 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5452.JPG)  
 ***
 ##Results and Discussion:  
-###1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
+####1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
 
-###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.  
+####2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.  
 
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/One_baffle_graph_model.png)  
 **Graph of CMFR and AD models compared with data from experiment with one baffle with 5 mm diameter holes**  
@@ -51,26 +51,25 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 It is difficult to say which model is better because they both fit the data points better in separate regions.  
 
 
-###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?  
+####3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?  
 
 CMFR: Pe = n/a , N= 1.00  
 One Baffle w/ 5mm holes: Pe = 1.741 , N = 1.801  
-
 Two Baffles: Pe = 2.288, N = 2.17  
 Three Baffles: Pe = 2.464, N = 2.210  
 Four Baffles: Pe = 4.762; N = 3.37  
 
 
-###4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?  
+####4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?  
 One Baffle w/ 5mm holes: t⋆ = 0.4396  
 Two Baffles: t⋆ = 0.4637  
 Three Baffles: t⋆ = 0.4857  
 Four Baffles: t⋆ = 0.5463  
 
 Yes they meet our expectations.  
-###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.  
+####5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.  
 The difference of the hydraulic residence time calculated with the flow rate and volume and the hydraulic residence time from the AD model is evidence of "dead volumes" in our reactors. The hydraulic residence time of the AD model is lower than the other one which can be attributed to dead volumes located in the reactor.  
-###6. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be  
+####6. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be  
 
 We would recommend a chlorine contact tank with several baffles between the influent and the effluent. We found that there is greater dispersion with an increase in baffles. The higher number of baffles create a longer flow path thereby increasing the residence time for which the chlorine is in contact with contaminants.
 ***
