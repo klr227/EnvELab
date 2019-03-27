@@ -48,7 +48,7 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 )   
 **Graph of CMFR and AD models compared with data from experiment with four baffles**   
 
-It is difficult to say which model is better because they both fit the data points better in separate regions.
+It is difficult to say which model is better because they both fit the data points better in separate regions.  
 
 
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?  
@@ -67,7 +67,7 @@ Two Baffles: t⋆ = 0.4637
 Three Baffles: t⋆ = 0.4857  
 Four Baffles: t⋆ = 0.5463  
 
-Yes they meet our expectations.
+Yes they meet our expectations.  
 ###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.  
 The difference of the hydraulic residence time calculated with the flow rate and volume and the hydraulic residence time from the AD model is evidence of "dead volumes" in our reactors. The hydraulic residence time of the AD model is lower than the other one which can be attributed to dead volumes located in the reactor.  
 ###6. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be  
