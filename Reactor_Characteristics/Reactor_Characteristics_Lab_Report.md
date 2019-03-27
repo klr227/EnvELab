@@ -1,6 +1,6 @@
 #Reactor Characteristics  
 ##Group 7:  
-Ken Rivero Rivera - 12 hours  
+Ken Rivero Rivera - 14 hours  
 Catherine Johnson - 3 hours  
 ***
 ##Introduction:  
@@ -9,7 +9,7 @@ In water and wastewater treatment plants, chlorine is used to disinfect water in
 ##Objectives:  
 The purpose of this lab is to maximize the time that water spends in the reactor and to understand how the addition of barriers and baffles effects flow and dispersion in a reactor.  
 ##Procedures:  
-A 1 foot long reactor was set up to receive water from a reservoir via peristaltic pump with a flow rate of 380 mg/L (100rpm). The peristaltic pump was also used to retrieve water in the tank near the outlet and send through the photometer. The first experiment was modelling a CMFR. This was an open tank with a stir bar. The remaining experiments were a series of baffle configurations that can be seen below.  
+A 1 foot long reactor was set up to receive water from a reservoir via peristaltic pump with a flow rate of 380 mg/L (100rpm). The peristaltic pump was also used to retrieve water in the tank near the outlet and send through the photometer. The first experiment was modeling a CMFR. This was an open tank with a stir bar. The remaining experiments were a series of baffle configurations that can be seen below.  
 ####Configuration 1:  
 One baffle with small holes (5mm diameter) was placed in the middle of the reactor. These holes were arranged such that there were 6 holes horizontally per row, and 4 holes vertically per column. Only the bottom two rows were submerged in the water in this experiment, meaning the flow was through 12 holes.   
 
@@ -31,7 +31,7 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5452.JPG)  
 ***
 ##Results and Discussion:  
-###1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.  
+###1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
 
 ###2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.  
 
@@ -46,7 +46,10 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 **Graph of CMFR and AD models compared with data from experiment with three baffles**  
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Trial_4_Graph_model.png
 )   
-**Graph of CMFR and AD models compared with data from experiment with four baffles**  
+**Graph of CMFR and AD models compared with data from experiment with four baffles**   
+
+It is difficult to say which model is better because they both fit the data points better in separate regions.
+
 
 ###3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?  
 
@@ -64,12 +67,15 @@ Two Baffles: t⋆ = 0.4637
 Three Baffles: t⋆ = 0.4857  
 Four Baffles: t⋆ = 0.5463  
 
-###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.
+Yes they meet our expectations.
+###5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.  
 The difference of the hydraulic residence time calculated with the flow rate and volume and the hydraulic residence time from the AD model is evidence of "dead volumes" in our reactors. The hydraulic residence time of the AD model is lower than the other one which can be attributed to dead volumes located in the reactor.  
 ###6. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be  
+
+We would recommend a chlorine contact tank with several baffles between the influent and the effluent. We found that there is greater dispersion with an increase in baffles. The higher number of baffles create a longer flow path thereby increasing the residence time for which the chlorine is in contact with contaminants.
 ***
 ##Conclusion:  
-
+We tested the residence of a reactor with four different configurations. We determined that the higher number of baffles increases residence time in which chlorine is in contact with contaminant. Also by decreasing the width of the flow path and increasing it's length, we decrease the amount of dead volume in a reactor.
 ##Suggestions:  
 1. The first suggestion we have is straightforward - include in the instructions that the bigger tube in the peristaltic pump is for the influent not the effluent. A lot of people mixed those two around. Explicit direction in this step would save some time.  
 2. The photometer is used to determine the concentration of red dye at the outlet, however it is not necessarily measuring what exactly leaves the reactor. In the CMFR simulation, it would because that is well mixed. However, when using the baffles, the flow is not well mixed. Therefore, the concentration of what is leaving in real time is not necessarily what is next to the outlet. Perhaps there is a way to attach the photometer to the outlet in the future.  
