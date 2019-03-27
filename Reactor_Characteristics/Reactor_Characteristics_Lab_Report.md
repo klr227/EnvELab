@@ -1,7 +1,7 @@
 #Reactor Characteristics  
 ##Group 7:  
 Ken Rivero Rivera - 14 hours  
-Catherine Johnson - 5 hours  
+Catherine Johnson - 6 hours  
 ***
 ##Introduction:  
 In water and wastewater treatment plants, chlorine is used to disinfect water in contact tanks. In order to maximize the effectiveness of the disinfecting process, the time the water spends in the tank must also be maximized. This allows for a better chance that bacteria and other pathogens in the water will be neutralized. This lab experiment is a tracer study, which are used to understand the characteristics of different reactor apparatuses.  
