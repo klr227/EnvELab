@@ -31,10 +31,8 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/Images/IMG_5452.JPG)  
 ***
 ##Results and Discussion:  
-####1. Use multivariable nonlinear regression to obtain the best fit between the experimental data and the two models by minimizing the sum of the squared errors. Use epa.Solver_AD_Pe and epa.Solver_CMFR_N. These functions will minimize the error by varying the values of average residence time, (mass of tracer/reactor volume), and either the number of CMFR in series or the Peclet number.
 
-####2. Generate a plot showing the experimental data as points and the model results as thin lines for each of your experiments. Explain which model fits best and discuss those results based on your expectations.  
-
+The following plots compare the experimental data with the model results. It is difficult to determine which model fits the data best. We believe this is because the bottom of the baffles weren't taped which would allow flow under the baffles.
 ![](https://github.com/klr227/EnvELab/blob/master/Reactor_Characteristics/One_baffle_graph_model.png)  
 **Graph of CMFR and AD models compared with data from experiment with one baffle with 5 mm diameter holes**  
 
@@ -48,10 +46,8 @@ Four baffles were placed such that the reactor consisted of five equal sized sub
 )   
 **Graph of CMFR and AD models compared with data from experiment with four baffles**   
 
-It is difficult to say which model is better because they both fit the data points better in separate regions.  
 
-
-####3. Compare the trends in the estimated values of N and Pe across your set of experiments. How did your chosen reactor modifications effect dispersion?  
+The following are our estimated values of N and Pe across experiments. Based on these values, an increasing number of baffles in a reactor increases dispersion.  
 
 CMFR: Pe = n/a , N= 1.00  
 One Baffle w/ 5mm holes: Pe = 1.741 , N = 1.801  
@@ -60,16 +56,14 @@ Three Baffles: Pe = 2.464, N = 2.210
 Four Baffles: Pe = 4.762; N = 3.37  
 
 
-####4. Report the values of t⋆ at F = 0.1 for each of your experiments. Do they meet your expectations?  
-One Baffle w/ 5mm holes: t⋆ = 0.4396  
+
+The following values of t⋆ occur when F = 0.1. and they meet our expectations for this lab.  
+One Baffle w/ 5mm holes: t⋆ = 0.4396    
 Two Baffles: t⋆ = 0.4637  
 Three Baffles: t⋆ = 0.4857  
 Four Baffles: t⋆ = 0.5463  
 
-Yes they meet our expectations.  
-####5. Evaluate whether there is any evidence of “dead volumes” or “short circuiting” in your reactor.  
 The difference of the hydraulic residence time calculated with the flow rate and volume and the hydraulic residence time from the AD model is evidence of "dead volumes" in our reactors. The hydraulic residence time of the AD model is lower than the other one which can be attributed to dead volumes located in the reactor.  
-####6. Make a recommendation for the design of a full scale chlorine contact tank. As part of your recommendation discuss the parameter you chose to vary as part of your experimentation and what the optimal value was determined to be  
 
 We would recommend a chlorine contact tank with several baffles between the influent and the effluent. We found that there is greater dispersion with an increase in baffles. The higher number of baffles create a longer flow path thereby increasing the residence time for which the chlorine is in contact with contaminants.  
 ***
