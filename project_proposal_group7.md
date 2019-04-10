@@ -11,21 +11,19 @@ Our objective is to determine the ability of PAC vs. coagulant (both suspended i
 ##Experimental plan including – How will you measure it?  
 We will be measuring the absorbance of the effluent of the system using a photometer. This will correspond to a certain concentration of the various dyes (we will need to calibrate the photometer for each), and thus we will be able to measure how long it takes the dye to be removed by the various substances (PAC, coagulant, sand).  
 ##Key design parameters  
-\begin{itemize}
-  \item Amount of PAC: varied.  
-  \item Amount of Coagulant: varied.  
-  \item Flow rates: Want flow rates high enough that doesn’t require a long run time and low enough that black carbon/coagulant doesn’t get displaced into the entire system.  
-  \item Volumes: Same tubing as adsorption lab.  
-  \item Concentrations: 0.1 g/L of Red dye #40 will be the influent for half the experiment. Green dye initial concentration when we obtain the material, but will be a similar concentration for consistency.  
-  \item Varied Parameters: Flow rate, mass of activated black carbon and coagulant.  
-\begin{itemize}
+
+* Amount of PAC: varied.  
+* Amount of Coagulant: varied.  
+* Flow rates: Want flow rates high enough that doesn’t require a long run time and low enough that black carbon/coagulant doesn’t get displaced into the entire system.  
+* Volumes: Same tubing as adsorption lab.  
+* Concentrations: 0.1 g/L of Red dye #40 will be the influent for half the experiment. Green dye initial concentration when we obtain the material, but will be a similar concentration for consistency.  
+* Varied Parameters: Flow rate, mass of activated black carbon and coagulant.  
 ##Timeline of tasks/experiments  
 ![](https://github.com/klr227/EnvELab/blob/master/calendar_schedule.png)  
 ##Possible hurdles/challenges  
-\begin{itemize}
-  \item Photometer doesn’t identify green dye #3  
-  \item Flow rates too high - dislodge the PAC or coagulant  
-\end{itemize}
+* Photometer doesn’t identify green dye #3  
+* Flow rates too high - dislodge the PAC or coagulant  
+
 ##Refs to primary, review, and other literature and possibly to previous years’ projects
 https://monroews.github.io/EnvEngLabTextbook/Adsorption/Adsorption.html  
 https://www.sciencedirect.com/science/article/pii/S0043135403004238  
