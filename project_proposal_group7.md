@@ -18,6 +18,7 @@ We will be measuring the absorbance of the effluent of the system using a photom
 * Volumes: Same tubing as adsorption lab.  
 * Concentrations: 0.1 g/L of Red dye #40 will be the influent for half the experiment. Green dye initial concentration when we obtain the material, but will be a similar concentration for consistency.  
 * Varied Parameters: Flow rate, mass of activated black carbon and coagulant.  
+
 ##Timeline of tasks/experiments  
 ![](https://github.com/klr227/EnvELab/blob/master/calendar_schedule.png)  
 ##Possible hurdles/challenges  
@@ -30,13 +31,11 @@ https://www.sciencedirect.com/science/article/pii/S0043135403004238
 https://www.awwa.org/Portals/0/files/publications/documents/M37LookInside.pdf  
 https://www.researchgate.net/publication/8046502_Temperature_effects_on_flocculation_using_different_coagulants  
 ##Resources needed to conduct experiments – What tools will you use?  
-\begin{itemize}
-  \item Red dye #40  
-  \item Green dye #3  
-  \item Red dye #3 (only if green doesn’t work)  
-  \item Coagulant (PaCl) - obtained from AguaClara  
-  \item PAC  
-\end{itemize}  
+* Red dye #40  
+* Green dye #3  
+* Red dye #3 (only if green doesn’t work)  
+* Coagulant (PaCl) - obtained from AguaClara  
+* PAC  
 ##Expectations/Anticipated results  
 We anticipate that the PAC will remove the substance more slowly than coagulant at removing substances from water. This is based on our previous observations from other labs where we saw that activated carbon in granular form took a very long time to remove red dye #40 if the entire column was just activated carbon.  However, we do not know how coagulant will behave as we don't have experience with this material.  
 ##References/Bibliography  
