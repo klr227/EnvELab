@@ -36,6 +36,8 @@ https://www.researchgate.net/publication/8046502_Temperature_effects_on_floccula
 * Red dye #3 (only if green doesn’t work)  
 * Coagulant (PaCl) - obtained from AguaClara  
 * PAC  
+
+
 ##Expectations/Anticipated results  
 We anticipate that the PAC will remove the substance more slowly than coagulant at removing substances from water. This is based on our previous observations from other labs where we saw that activated carbon in granular form took a very long time to remove red dye #40 if the entire column was just activated carbon.  However, we do not know how coagulant will behave as we don't have experience with this material.  
 ##References/Bibliography  
