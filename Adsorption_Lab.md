@@ -10,23 +10,30 @@ Catherine Johnson
 2. Find the time when the effluent concentration was 50% of the influent concentration and plot that as a function of the mass of activated carbon used.  
 ![](insertlinkhere)
 3. Calculate the retardation coefficient (R_adsorption) based on the time to breakthrough for the columns with and without activated carbon.  
-R_adsorption for columns without activated carbon:  
+
 \begin{center}  
 \begin{tabular}{ c c }  
   \hline  
   Mass of Activated Carbon & R_adsorption
   \hline
-  0min & 0.001826 \\
-  5min & 0.000922 \\
-  10min & 0.000276 \\
-  15min & -0.0008 \\
-  20min & -0.000293
+  0 g     & 4.057391873426739 \\
+  0 g     & 3.895119425219836 \\
+  0 g     & 3.375700776259933 \\
+  0 g     & 3.1648333923475 \\
+  0.5 g   & 3.2459139474587464 \\
+  0.601 g & 2.840217542507668 \\
+  1.66 g  & 9.00752437911898 \\
+  2 g     & 13.08396188859742 \\
+  4 g     & 1.7394930342958896
+  13.8 g  & 14.347661813418998
+  15 g    & 58.99487731863073
+  15.63 g & 17.301050266575995
+  29.34 g & 427.69777096649693
 \end{tabular}
 \end{center}
-3.1648333923475 & 3.1648333923475 & 16.457133640206997 & 3.1648333923475 & 3.1648333923475 & 3.1648333923475 & 3.1648333923475 & 2.9496247216678704 & 2.9496247216678704 & 16.457133640206997 & 3.1648333923475 & 16.457133640206997 & 2.955954388452565
 
-R_adsorption for columns with activated carbon:
 4. Calculate the q_0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.  
+![](insertlinkhere)
 
 ##Conclusions  
 
@@ -165,15 +172,17 @@ plt.show()
 #Calculate the Retardation Coefficient (R_adsorption) based on the time to breakthrough for the columns with and without activated carbon.
 c = 0
 d = 0
-R_adsorption_0 = np.zeros(4)
+R_adsorption_0 = np.zeros(4)*u.dimensionless
+R_adsorption_not0 = np.zeros(9)*u.dimensionless
+
 for i in range(np.size(filenames)):
   if (Mass_carbon[i] == 0*u.gram):
-    R_adsorption_0[c] = half_time[i]/HRT #without activated carbon
+    R_adsorption_0[c] = half_time[i]/HRT[i] #without activated carbon
     c = c+1
   if (Mass_carbon[i] > 0*u.gram):
-    R_adsorption_not0[d] = half_time[i]/HRT #with activated carbon
+    R_adsorption_not0[d] = half_time[i]/HRT[i] #with activated carbon
     d = d+1
-R_adsorption_0
+R_adsorption_not0
 #Calculate the q0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.
 q0 = np.zeros(np.size(R_adsorption_not0))
 for i in range(np.size(filenames)):
