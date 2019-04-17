@@ -13,13 +13,6 @@ Catherine Johnson
 ##Appendix
 
 ```python
-
-#plot C/C_0 vs. time
-
-
-
-#Find the time when the effluent concentration was 50% of the influent concentration and plot that as a function of the mass of activated carbon used.
-
 from aguaclara.core.units import unit_registry as u
 import aguaclara.research.environmental_processes_analysis as epa
 import aguaclara.core.physchem as pc
@@ -91,7 +84,7 @@ Tubing_HRT = Tubing_V/Flow_rate
 porosity = 0.4
 C_0 = 50 * u.mg/u.L
 
-#estimate the HRT for all of the columns
+#estimate the hydraulic residence time HRT for all of the columns
 HRT = (porosity * Column_V/Flow_rate).to(u.s)
 
 #zero the concentration data by subtracting the value of the first data point from all data points. Do this in each data set.
@@ -113,25 +106,12 @@ plt.legend(mylegend);
 plt.show()
 
 # create a graph of the columns that had different masses of activated carbon. Note that this includes systems with different flow rates!
+#plot C/C_0 vs. time
 mylegend =[]
 for i in range(np.size(filenames)):
   if (metadata['carbon (g)'][i] != 0):
     plt.plot(time_data[i]/HRT[i] - Tubing_HRT[i]/HRT[i], C_data[i]/C_0,'-');
     mylegend.append(str(ut.round_sf(metadata['carbon (g)'][i],3)) + ' g, ' + str(ut.round_sf(metadata['flow (mL/s)'][i],2)) + ' mL/s')
-
-for i in range(np.size(filenames)):
-  C = C_data[i]
-  print(np.size(C))
-
-for i in range(np.size(filenames)):
-  C = C_data[i]
-  index = 0
-  for j in range(np.size(C)):
-    if C(j) < (.5*C_0):
-      index = j + 1
-  timeindex.append(index)
-
-
 
 plt.xlabel(r'$\frac{t}{\theta}$');
 plt.xlim(right=100,left=0);
@@ -139,7 +119,37 @@ plt.ylabel(r'Red dye concentration $\left ( \frac{mg}{L} \right )$');
 plt.legend(mylegend);
 plt.show()
 
+#Find the time when the effluent concentration was 50% of the influent concentration and plot that as a function of the mass of activated carbon used.
+half = C_0*0.5
+index = np.zeros(np.size(filenames))
+half_time = np.zeros(np.size(filenames))*u.s
+for i in range(np.size(filenames)):
+  C = C_data[i]
+  for k in range(np.size(C)):
+    if (C[k] >= half):
+      break
+  half_time[i] = time_data[i][k]
 
+half_time
+Mass_carbon  
+plt.plot(Mass_carbon,half_time)
+plt.xlabel('Mass of Activated Carbon (g)')
+plt.ylabel('Time when Effluent = 50% Influent')
+plt.show()
 
 
 #Calculate the Retardation Coefficient (R_adsorption) based on the time to breakthrough for the columns with and without activated carbon.
+#with activated carbon
+
+for i in range(np.size(filenames)):
+  mass = Mass_carbon[i]
+  if (mass == 0*u.gram):
+    R_adsorption_0 = half_time[i]/HRT
+  if (mass > 0*u.gram):
+    R_adsorption_not0 = half_time[i]/HRT
+#without activated carbon
+#Calculate the q0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.
+for i in range(np.size(filenames)):
+  mass_check = Mass_carbon[i]
+  if (mass_check > 0*u.gram):
+    q0[i] = (R_adsorption-1)*(C_0*porosity*Column_V)/Mass_carbon
