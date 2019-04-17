@@ -1,17 +1,40 @@
-#Adsorption Lab
+#Adsorption Lab  
 
-Group 7
-Ken Rivero-Rivera
-Catherine Johnson
+Group 7  
+Ken Rivero-Rivera  
+Catherine Johnson  
 
-##Conclusions
+##Analysis Questions  
+1. Plot the breakthrough curves showing C/C_0 versus time.  
+![](insertlinkhere)
+2. Find the time when the effluent concentration was 50% of the influent concentration and plot that as a function of the mass of activated carbon used.  
+![](insertlinkhere)
+3. Calculate the retardation coefficient (R_adsorption) based on the time to breakthrough for the columns with and without activated carbon.  
+R_adsorption for columns without activated carbon:  
+\begin{center}  
+\begin{tabular}{ c c }  
+  \hline  
+  Mass of Activated Carbon & R_adsorption
+  \hline
+  0min & 0.001826 \\
+  5min & 0.000922 \\
+  10min & 0.000276 \\
+  15min & -0.0008 \\
+  20min & -0.000293
+\end{tabular}
+\end{center}
+3.1648333923475 & 3.1648333923475 & 16.457133640206997 & 3.1648333923475 & 3.1648333923475 & 3.1648333923475 & 3.1648333923475 & 2.9496247216678704 & 2.9496247216678704 & 16.457133640206997 & 3.1648333923475 & 16.457133640206997 & 2.955954388452565
+
+R_adsorption for columns with activated carbon:
+4. Calculate the q_0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.  
+
+##Conclusions  
 
 
-##Suggestions
+##Suggestions  
 
 
-##Appendix
-
+##Appendix  
 ```python
 from aguaclara.core.units import unit_registry as u
 import aguaclara.research.environmental_processes_analysis as epa
@@ -74,12 +97,15 @@ metadata
 Column_D = 1 * u.inch
 Column_A = pc.area_circle(Column_D)
 Column_L = 15.2 * u.cm
+Column_L = 0.152 *u.m
 Column_V = Column_A * Column_L
+
 #I'm guessing at the volume of water in the tubing, in the photometer, and in the space above and below the column. This parameter could be adjusted!
 Tubing_V = 60 * u.mL
 Flow_rate = ([metadata['flow (mL/s)'][i] for i in metadata.index])* u.mL/u.s
 Mass_carbon= ([metadata['carbon (g)'][i] for i in metadata.index])* u.g
 Tubing_HRT = Tubing_V/Flow_rate
+Mass_carbon
 #to make things simple we are assuming that the porosity is the same for sand and for activated carbon. That is likely not true!
 porosity = 0.4
 C_0 = 50 * u.mg/u.L
@@ -130,8 +156,6 @@ for i in range(np.size(filenames)):
       break
   half_time[i] = time_data[i][k]
 
-half_time
-Mass_carbon  
 plt.plot(Mass_carbon,half_time)
 plt.xlabel('Mass of Activated Carbon (g)')
 plt.ylabel('Time when Effluent = 50% Influent')
@@ -139,17 +163,21 @@ plt.show()
 
 
 #Calculate the Retardation Coefficient (R_adsorption) based on the time to breakthrough for the columns with and without activated carbon.
-#with activated carbon
-
+c = 0
+d = 0
+R_adsorption_0 = np.zeros(4)
 for i in range(np.size(filenames)):
-  mass = Mass_carbon[i]
-  if (mass == 0*u.gram):
-    R_adsorption_0 = half_time[i]/HRT
-  if (mass > 0*u.gram):
-    R_adsorption_not0 = half_time[i]/HRT
-#without activated carbon
+  if (Mass_carbon[i] == 0*u.gram):
+    R_adsorption_0[c] = half_time[i]/HRT #without activated carbon
+    c = c+1
+  if (Mass_carbon[i] > 0*u.gram):
+    R_adsorption_not0[d] = half_time[i]/HRT #with activated carbon
+    d = d+1
+R_adsorption_0
 #Calculate the q0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.
+q0 = np.zeros(np.size(R_adsorption_not0))
 for i in range(np.size(filenames)):
   mass_check = Mass_carbon[i]
   if (mass_check > 0*u.gram):
-    q0[i] = (R_adsorption-1)*(C_0*porosity*Column_V)/Mass_carbon
+    for k in range(np.size(R_adsorption_not0)):
+      q0[k] = (R_adsorption_not0[k]-1)*(C_0*porosity*Column_V)/Mass_carbon[i]
