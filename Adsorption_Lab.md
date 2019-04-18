@@ -1,8 +1,8 @@
 #Adsorption Lab  
 
 Group 7  
-Ken Rivero-Rivera  
-Catherine Johnson  
+Ken Rivero-Rivera - 8
+Catherine Johnson - 8  
 
 ##Analysis Questions  
 1. Plot the breakthrough curves showing C/C_0 versus time.  
