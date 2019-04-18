@@ -6,42 +6,38 @@ Catherine Johnson - 8
 
 ##Analysis Questions  
 1. Plot the breakthrough curves showing C/C_0 versus time.  
-![](insertlinkhere)
+![](https://github.com/klr227/EnvELab/blob/master/CC0graphs.png)   
 2. Find the time when the effluent concentration was 50% of the influent concentration and plot that as a function of the mass of activated carbon used.  
-![](insertlinkhere)
+![](https://github.com/klr227/EnvELab/blob/master/EffluentInfluent.png)   
 3. Calculate the retardation coefficient (R_adsorption) based on the time to breakthrough for the columns with and without activated carbon.  
 
-\begin{center}  
-\begin{tabular}{ c c }  
-  \hline  
-  Mass of Activated Carbon & R_adsorption
-  \hline
-  0 g     & 4.057391873426739 \\
-  0 g     & 3.895119425219836 \\
-  0 g     & 3.375700776259933 \\
-  0 g     & 3.1648333923475 \\
-  0.5 g   & 3.2459139474587464 \\
-  0.601 g & 2.840217542507668 \\
-  1.66 g  & 9.00752437911898 \\
-  2 g     & 13.08396188859742 \\
-  4 g     & 1.7394930342958896
-  13.8 g  & 14.347661813418998
-  15 g    & 58.99487731863073
-  15.63 g & 17.301050266575995
-  29.34 g & 427.69777096649693
-\end{tabular}
-\end{center}
+|Mass of Activated Carbon|Retardation Coefficient|
+|:------------------------:|:-----------------------:|
+|0 g|4.057391873426739 |
+|0 g|3.895119425219836 |
+|0 g|3.375700776259933 |
+|0 g|3.1648333923475   |
+|0.5 g   |3.2459139474587464   |
+|0.601 g   |2.840217542507668   |
+|1.66 g   |9.00752437911898   |
+|2.0 g   |13.08396188859742   |
+|4.0 g   |1.7394930342958896   |
+|13.8 g | 14.347661813418998|
+|15 g |58.99487731863073|
+|15.63 g | 17.301050266575995|
+|29.34 g |427.69777096649693|
+
 
 4. Calculate the q_0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.  
-![](insertlinkhere)
+![](https://github.com/klr227/EnvELab/blob/master/q0.png)   
 
 ##Conclusions  
-Activated carbon has a significant effect on the adsorption process. As can be seen in the tables and graphs above, the experiments with little to no activated carbon had small retardation factors and reached 50% of the initial concentration in the outflow more quickly. The growth of the retardation factor also appears to have a non-linear relationship with the mass of activated carbon, so in real-world applications there would be an ideal point of effectiveness vs. cost that would still result in a high-rated performance.
+Activated carbon has a significant effect on the adsorption process. As can be seen in the tables and graphs above, the experiments with little to no activated carbon had small retardation factors and reached 50% of the initial concentration in the outflow more quickly. The growth of the retardation factor also appears to have a non-linear relationship with the mass of activated carbon, so in real-world applications there would be an ideal point of effectiveness vs. cost that would still result in a high-rated performance.   
 
 ##Suggestions  
-Our primary suggestion would be to improve the instructions for the lab (we know that this lab is new to the course, so not much of it is too refined). For example, the wet vs. dry methods of adding the adsorbent into the column were listed out clearly. However, it was not clear that we were supposed to choose one. In the future, I would suggest that some groups do the dry method and some do the wet method and perhaps have a question where you compare the results from the two to see if one worked better than the other.
+Our primary suggestion would be to improve the instructions for the lab (we know that this lab is new to the course, so not much of it is too refined). For example, the wet vs. dry methods of adding the adsorbent into the column were listed out clearly. However, it was not clear that we were supposed to choose one. In the future, I would suggest that some groups do the dry method and some do the wet method and perhaps have a question where you compare the results from the two to see if one worked better than the other.   
 
-##Appendix  
+##Appendix    
 ```python
 from aguaclara.core.units import unit_registry as u
 import aguaclara.research.environmental_processes_analysis as epa
@@ -150,6 +146,7 @@ plt.xlabel(r'$\frac{t}{\theta}$');
 plt.xlim(right=100,left=0);
 plt.ylabel(r'Red dye concentration $\left ( \frac{mg}{L} \right )$');
 plt.legend(mylegend);
+plt.savefig('CC0graphs.png')
 plt.show()
 
 #Find the time when the effluent concentration was 50% of the influent concentration and plot that as a function of the mass of activated carbon used.
@@ -166,6 +163,7 @@ for i in range(np.size(filenames)):
 plt.plot(Mass_carbon,half_time)
 plt.xlabel('Mass of Activated Carbon (g)')
 plt.ylabel('Time when Effluent = 50% Influent')
+plt.savefig('EffluentInfluent.png')
 plt.show()
 
 
@@ -190,3 +188,12 @@ for i in range(np.size(filenames)):
   if (mass_check > 0*u.gram):
     for k in range(np.size(R_adsorption_not0)):
       q0[k] = (R_adsorption_not0[k]-1)*(C_0*porosity*Column_V)/Mass_carbon[i]
+
+Mass_carbon[4:]
+q0
+
+plt.plot(Mass_carbon[4:],q0)
+plt.xlabel('Mass of Activated Carbon(g)')
+plt.ylabel('q0')
+plt.savefig('q0')
+plt.show()
