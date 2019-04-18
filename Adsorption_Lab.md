@@ -36,10 +36,10 @@ Catherine Johnson
 ![](insertlinkhere)
 
 ##Conclusions  
-
+Activated carbon has a significant effect on the adsorption process. As can be seen in the tables and graphs above, the experiments with little to no activated carbon had small retardation factors and reached 50% of the initial concentration in the outflow more quickly. The growth of the retardation factor also appears to have a non-linear relationship with the mass of activated carbon, so in real-world applications there would be an ideal point of effectiveness vs. cost that would still result in a high-rated performance.
 
 ##Suggestions  
-
+Our primary suggestion would be to improve the instructions for the lab (we know that this lab is new to the course, so not much of it is too refined). For example, the wet vs. dry methods of adding the adsorbent into the column were listed out clearly. However, it was not clear that we were supposed to choose one. In the future, I would suggest that some groups do the dry method and some do the wet method and perhaps have a question where you compare the results from the two to see if one worked better than the other.
 
 ##Appendix  
 ```python
