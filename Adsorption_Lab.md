@@ -1,7 +1,7 @@
 #Adsorption Lab  
 
 Group 7  
-Ken Rivero-Rivera - 8
+Ken Rivero-Rivera - 8   
 Catherine Johnson - 8  
 
 ##Analysis Questions  
