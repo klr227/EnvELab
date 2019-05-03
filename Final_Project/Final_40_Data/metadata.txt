@@ -1,4 +1,4 @@
-File name	Coagulant added (uL)	Pump_rate (rev/min)
+file name	Coagulant added (uL)	Pump_rate (rev/min)
 red40_baseline.xls	0	20
 red40_coag445.xls	445	20
 red40_coag745.xls	745	20
