@@ -5,11 +5,11 @@ Ken Rivero-Rivera - 8
 Catherine Johnson - 8  
 
 ##Analysis Questions  
-1. Plot the breakthrough curves showing C/C_0 versus time.  
+#####1. Plot the breakthrough curves showing C/C_0 versus time.  
 ![](https://github.com/klr227/EnvELab/blob/master/CC0graphs.png)   
-2. Find the time when the effluent concentration was 50% of the influent concentration and plot that as a function of the mass of activated carbon used.  
+#####2. Find the time when the effluent concentration was 50% of the influent concentration and plot that as a function of the mass of activated carbon used.  
 ![](https://github.com/klr227/EnvELab/blob/master/EffluentInfluent.png)   
-3. Calculate the retardation coefficient (R_adsorption) based on the time to breakthrough for the columns with and without activated carbon.  
+#####3. Calculate the retardation coefficient (R_adsorption) based on the time to breakthrough for the columns with and without activated carbon.  
 
 |Mass of Activated Carbon|Retardation Coefficient|
 |:------------------------:|:-----------------------:|
@@ -28,7 +28,7 @@ Catherine Johnson - 8
 |29.34 g |427.69777096649693|
 
 
-4. Calculate the q_0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.  
+#####4. Calculate the q_0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.  
 ![](https://github.com/klr227/EnvELab/blob/master/q0.png)   
 
 ##Conclusions  
@@ -180,7 +180,7 @@ for i in range(np.size(filenames)):
   if (Mass_carbon[i] > 0*u.gram):
     R_adsorption_not0[d] = half_time[i]/HRT[i] #with activated carbon
     d = d+1
-R_adsorption_not0
+
 #Calculate the q0 for each of the columns based on equation (97). Plot this as a function of the mass of activated carbon used.
 q0 = np.zeros(np.size(R_adsorption_not0))
 for i in range(np.size(filenames)):
@@ -188,9 +188,6 @@ for i in range(np.size(filenames)):
   if (mass_check > 0*u.gram):
     for k in range(np.size(R_adsorption_not0)):
       q0[k] = (R_adsorption_not0[k]-1)*(C_0*porosity*Column_V)/Mass_carbon[i]
-
-Mass_carbon[4:]
-q0
 
 plt.plot(Mass_carbon[4:],q0)
 plt.xlabel('Mass of Activated Carbon(g)')
