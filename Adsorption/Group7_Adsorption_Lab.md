@@ -74,7 +74,7 @@ def adsorption_data(C_column, dirpath):
     """
     #return the list of files in the directory
     metadata = pd.read_csv(dirpath + '/metadata.txt', delimiter='\t')
-    filenames = metadata['file name']
+    filenames = metadata['file']
     #extract the flowrates from the filenames and apply units
     #sort airflows and filenames so that they are in ascending order of flow rates
 
