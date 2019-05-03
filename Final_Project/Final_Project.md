@@ -35,6 +35,7 @@ def adsorption_data(C_column, dirpath):
     #return the list of files in the directory
     metadata = pd.read_csv(dirpath + '/metadata.csv', delimiter=',')
     filenames = metadata['file name']
+    print(filenames)
     #extract the flowrates from the filenames and apply units
     #sort airflows and filenames so that they are in ascending order of flow rates
 
@@ -52,21 +53,38 @@ def adsorption_data(C_column, dirpath):
 C_column = 1
 dirpath = "https://raw.githubusercontent.com/klr227/EnvELab/master/Final_Project/Final_40_Data"
 metadata, filenames, C_data, time_data = adsorption_data(C_column,dirpath)
-metadata
-C_data
-time_data
+
 
 #zero the concentration data by subtracting the value of the first data point from all data points. Do this in each data set.
-for i in range(np.size(filenames)):
-  C_data[i]=C_data[i]-C_data[i][0]
+for i in range(np.size(filenames1)):
+  C_data1[i]=C_data1[i]-C_data1[i][0]
 
 
-mylegend = []
-for i in range(np.size(filenames)):
-  plt.plot(time_data[i], C_data[i],'-');
-  mylegend.append(str(metadata['Coagulant added (uL)'][i]) + ' uL')
+mylegend1 = []
+for i in range(np.size(filenames1)):
+  plt.plot(time_data1[i], C_data1[i],'-');
+  mylegend.append(str(metadata1['Coagulant added (uL)'][i]) + ' uL')
 
 plt.xlabel(r'$\frac{t}{\theta}$');
 plt.ylabel(r'Red dye concentration $\left ( \frac{mg}{L} \right )$');
-plt.legend(mylegend);
+plt.legend(mylegend1);
+plt.show()
+
+dirpath2 = "https://raw.githubusercontent.com/klr227/EnvELab/master/Final_Project/Final_3_Data"
+metadata2, filenames2, C_data2, time_data2 = adsorption_data(C_column,dirpath2)
+
+
+#zero the concentration data by subtracting the value of the first data point from all data points. Do this in each data set.
+for i in range(np.size(filenames2)):
+  C_data2[i]=C_data2[i]-C_data2[i][0]
+
+
+mylegend2 = []
+for i in range(np.size(filenames2)):
+  plt.plot(time_data2[i], C_data2[i],'-');
+  mylegend.append(str(metadata2['Coagulant added (uL)'][i]) + ' uL')
+
+plt.xlabel(r'$\frac{t}{\theta}$');
+plt.ylabel(r'Red dye concentration $\left ( \frac{mg}{L} \right )$');
+plt.legend(mylegend2);
 plt.show()
