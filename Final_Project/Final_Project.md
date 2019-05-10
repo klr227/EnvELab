@@ -11,10 +11,10 @@ The purpose of this experiment was to evaluate the performance of coagulant as a
 ##Procedures  
 A schematic of the experiment can be seen in the figure below.
 
-![](https://github.com/klr227/EnvELab/tree/master/Final_Project/Pictures)   
+![](https://github.com/klr227/EnvELab/tree/master/Final_Project/Pictures/AddingSandColumn.png)   
 **insert figure here**  
 The column was first filled with sand to ensure the correct volume of sand was obtained. Then, the sand and coagulant and 100mL of water was added to a beaker for mixing. While mixing, pH was monitored to ensure a pH above 6 was achieved. This was a necessary step because coagulant is largely ineffective in acidic conditions.
-Coa
+The aluminum in the coagulant is acidic, so a basic solution of 0.5M NaOH was added
 ##Results and Discussion  
 ##Conclusions and Suggestions  
 
