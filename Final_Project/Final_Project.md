@@ -21,7 +21,7 @@ A schematic of the experiment can be seen in the figure below.
 After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results. Both dyes were run through a sand-only column to obtain a baseline for the experiment. After, the team began testing coagulant. We started with 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media”. We then increased the volumes used to obtain data for comparisons. As you can see, we used both dyes for all volumes except the 1500 microliters of coagulant. This is because we quickly realized that red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Thus, we figured that the last experiment would not be worth the time.
 
 ## Results and Discussion  
-![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Final_Dye_3.png)  
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3.png)  
 ### Red Dye #3
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
 |:------------------------:|:-----------------------:|
