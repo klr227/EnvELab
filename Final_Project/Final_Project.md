@@ -18,7 +18,7 @@ A schematic of the experiment can be seen in the figure below.
 2. The sand, coagulant and 100mL of water was added to a beaker for mixing.  
 3. While mixing, pH was monitored.  
 4. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic.  
-5. The column was filled
+5. A small volume of the liquid in the mixure
 After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results. Both dyes were run through a sand-only column to obtain a baseline for the experiment. After, the team began testing coagulant. We started with 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media”. We then increased the volumes used to obtain data for comparisons. As you can see, we used both dyes for all volumes except the 1500 microliters of coagulant. This is because we quickly realized that red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Thus, we figured that the last experiment would not be worth the time.
 
 ## Results and Discussion  
@@ -37,11 +37,11 @@ After a few failed attempts at different flow rates, 1.25 mL/s was determined to
 |445 µL|2.83 min|
 |745 µL|5.17 min|
 |945 µL|5.58 min|
-|190 µL|3.17 min|
+|1500 µL|3.17 min|
 
-\[\begin{pmatrix}1.6666775999999928 & 2.833326288000073 & 5.1670082879999235 & 5.583222576000074 & 3.1668469920000137\end{pmatrix} minute\]
 
-Coagulant works very well for materials that precipitate, like Red Dye #3
+Coagulant works very well for materials that precipitate, like Red Dye #3.  
+
 ## Conclusions and Suggestions  
 
 This lab yielded some interesting results, including the adsorption of Red Dye #40 with 1500 μL, which performed worse than the 745 and 945 μL runs. This could be attributed to a fluke, or a result of human error in measurement or calibrating the instruments. However, the team did note all of the pHs of sand and coagulant mixture before addition to the column, and the 1500 μL run had the lowest pH at 6.1. The team did not add any more NaOH after this point because nearly 4.5 mL had already been added, the most of any other run, and flocs had begun to form in the mixture. It would be an interesting experiment in the future to see if the performance of coagulant as an adsorbent has correlation with the pH it starts out at.  
