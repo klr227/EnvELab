@@ -9,14 +9,16 @@ Water has a lot of important features. Because of these unique features, water i
 ##Objectives  
 The purpose of this experiment was to evaluate the performance of coagulant as an adsorbent. The coagulant was tested at different concentrations and was assessed for two different substances - Red Dye #40 and Red Dye #3.  
 ##Procedures  
-A schematic of the experiment can be seen in the figure below.  
+A schematic of the experiment can be seen in the figure below.
+
+![](https://github.com/klr227/EnvELab/tree/master/Final_Project/Pictures)   
 **insert figure here**  
 The column was first filled with sand to ensure the correct volume of sand was obtained. Then, the sand and coagulant and 100mL of water was added to a beaker for mixing. While mixing, pH was monitored to ensure a pH above 6 was achieved. This was a necessary step because coagulant is largely ineffective in acidic conditions.
-
+Coa
 ##Results and Discussion  
 ##Conclusions and Suggestions  
 
-This lab yielded some interesting results, including the adsorption of Red Dye #40 with 1500 μL, which s
+This lab yielded some interesting results, including the adsorption of Red Dye #40 with 1500 μL, which performed worse than the 745 and 945 μL runs. This could be attributed to a fluke, or a result of human error in measurement or calibrating the instruments. However, the team did note all of the pHs of sand and coagulant mixture before addition to the column, and 1500
 
 ```python
 from aguaclara.core.units import unit_registry as u
