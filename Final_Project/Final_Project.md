@@ -1,5 +1,5 @@
 # Coagulant Adsorption Final Project  
-### Ken Rivero - Rivera & Catherine Johnson  
+### Ken Rivero-Rivera & Catherine Johnson  
 
 ## Introduction  
 Water has a lot of important features. Because of these unique features, water is vital to the survival of life on Earth, it is found all over the world, and it is a universal solvent. It’s ability to be such a powerful solvent has both helped and hurt. It can carry essential substances to cells around the body of living creatures. But it can also be harmful, as the things it carries can be toxic pollutants, especially in an increasingly polluted world. Thus, there needs to be a way to remove pollutants from water - and one of those ways is through adsorption.
@@ -18,10 +18,11 @@ A schematic of the experiment can be seen in the figure below.
 2. The sand, coagulant and 100mL of water was added to a beaker for mixing.  
 3. While mixing, pH was monitored.  
 4. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic.  
-5. A small volume of the liquid in the mixure
+5. A small volume of the liquid in the mixture.
 After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results. Both dyes were run through a sand-only column to obtain a baseline for the experiment. After, the team began testing coagulant. We started with 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media”. We then increased the volumes used to obtain data for comparisons. As you can see, we used both dyes for all volumes except the 1500 microliters of coagulant. This is because we quickly realized that red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Thus, we figured that the last experiment would not be worth the time.
 
 ## Results and Discussion  
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3.png)  
 ### Red Dye #3
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
 |:------------------------:|:-----------------------:|
@@ -29,6 +30,8 @@ After a few failed attempts at different flow rates, 1.25 mL/s was determined to
 |445 µL|7.25 min|
 |745 µL|102.92 min|
 |945 µL|127.84 min|
+
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40.png)  
 
 ### Red Dye #40
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
