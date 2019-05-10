@@ -36,7 +36,7 @@ A schematic of the experiment can be seen in the figure below.
 |745 µL|102.92 min|
 |945 µL|127.84 min|
 
-![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3.png)  
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3_graph.png)  
 
 From this data, it is clear that increasing the amount of coagulant increases the effectiveness of it as an adsorbent. However, there is a big jump in the time it takes the dye to return to 50% of the stock solution from 445 μL and 745 μL, whereas the difference between 745 μL and 945 μL is not very large. This would indicate that there is some level where the performance of coagulant begins to plateau, meaning that adding more does not effect how much material is removed from solution.
 
@@ -50,7 +50,7 @@ From this data, it is clear that increasing the amount of coagulant increases th
 |945 µL|5.58 min|
 |1500 µL|3.17 min|
 
-![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40.png)   
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40_graph.png)   
 
 For Red Dye #40, the
 
