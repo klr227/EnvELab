@@ -17,8 +17,12 @@ A schematic of the experiment can be seen in the figure below.
 2. The sand, coagulant and 100mL of water was added to a beaker for mixing.  
 3. While mixing, pH was monitored.  
 4. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic.  
-5. A small volume of the liquid in the mixture.
-After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results. Both dyes were run through a sand-only column to obtain a baseline for the experiment. After, the team began testing coagulant. We started with 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media”. We then increased the volumes used to obtain data for comparisons. As you can see, we used both dyes for all volumes except the 1500 microliters of coagulant. This is because we quickly realized that red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Thus, we figured that the last experiment would not be worth the time.
+5. A small volume of the liquid in the mixture and then the sand portion of the mixture was added to the column. This "wet method" was employed so that there would not be any air pockets in the column.
+6. The initial amount of coagulant used was 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media.”
+7. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because Red Dye #3 was removed far more effectively by sand and coagulant than Red Dye #40 was. Where the red dye #40 experiments took minutes or less, the Red Dye #3 experiments took a few hours. Using 1500 μL of coagulant with Red Dye #3 would have taken too much time, and the stock tank for the solution would have run out.
+8. After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results.
+9. Both dyes were run through a sand-only column to obtain a baseline for the experiment.
+
 
 ## Results and Discussion  
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3.png)  
@@ -111,13 +115,14 @@ metadata1, filenames1, C_data1, time_data1 = adsorption_data(C_column,dirpath1)
 
 C_0_R3 = 70 * u.mg/u.L
 for i in range(np.size(filenames1)):
-  C_data1[i]=C_data1[i]-C_data1[i][0]
+  C_data1[i] = C_data1[i] - C_data1[i][0]
+  time_data1[i] = time_data1[i].to(u.min)
 mylegend1 = []
 for i in range(np.size(filenames1)):
   plt.plot(time_data1[i], C_data1[i]/C_0_R3,'-');
   mylegend1.append(str(metadata1['Coagulant added (uL)'][i]) + ' µL')
 
-plt.xlabel(r'Time (seconds)');
+plt.xlabel(r'Time (minutes)');
 plt.ylabel(r'Red dye #3 $\left ( \frac{C}{C0} \right )$');
 plt.legend(mylegend1);
 plt.savefig('Final_Project/Pictures/Red_Dye_3.png');
@@ -128,7 +133,8 @@ metadata2, filenames2, C_data2, time_data2 = adsorption_data(C_column,dirpath2)
 
 C_0_R40 = 100 * u.mg/u.L
 for i in range(np.size(filenames2)):
-  C_data2[i]=C_data2[i]-C_data2[i][0]
+  C_data2[i] = C_data2[i] - C_data2[i][0]
+  time_data2[i] = time_data2[i].to(u.min)
 mylegend2 = []
 for i in range(np.size(filenames2)):
   plt.plot(time_data2[i], C_data2[i]/C_0_R4,'-');
