@@ -38,7 +38,9 @@ A schematic of the experiment can be seen in the figure below.
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3.png)  
 
-From this data, it is clear that increasing the amount of coagulant increases the
+From this data, it is clear that increasing the amount of coagulant increases the effectiveness of it as an adsorbent. However, there is a big jump in the time it takes the dye to return to 50% of the stock solution from 445 μL and 745 μL, whereas the difference between 745 μL and 945 μL is not very large. This would indicate that there is some level where the performance of coagulant begins to plateau, meaning that adding more does not effect how much material is removed from solution.
+
+
 ### Red Dye #40
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
 |:------------------------:|:-----------------------:|
@@ -50,10 +52,10 @@ From this data, it is clear that increasing the amount of coagulant increases th
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40.png)   
 
-
-Coagulant works very well for materials that precipitate, like Red Dye #3.  
+For Red Dye #40, the
 
 ## Conclusions and Suggestions  
+Coagulant works very well for materials that precipitate, like Red Dye #3.  
 
 This lab yielded some interesting results, including the adsorption of Red Dye #40 with 1500 μL, which performed worse than the 745 and 945 μL runs. This could be attributed to a fluke, or a result of human error in measurement or calibrating the instruments. However, the team did note all of the pHs of sand and coagulant mixture before addition to the column, and the 1500 μL run had the lowest pH at 6.1. The team did not add any more NaOH after this point because nearly 4.5 mL had already been added, the most of any other run, and flocs had begun to form in the mixture. It would be an interesting experiment in the future to see if the performance of coagulant as an adsorbent has correlation with the pH it starts out at.  
 
@@ -137,7 +139,7 @@ for i in range(np.size(filenames1)):
 plt.xlabel(r'Time (minutes)');
 plt.ylabel(r'Red dye #3 $\left ( \frac{C}{C0} \right )$');
 plt.legend(mylegend1);
-plt.savefig('Final_Project/Pictures/Red_Dye_3.png');
+plt.savefig('Final_Project/Pictures/Red_Dye_3_graph.png');
 plt.show()
 #Url to Github folder containing red dye #40 ProCoDA data
 
@@ -162,7 +164,7 @@ for i in range(np.size(filenames2)):
 plt.xlabel(r'Time (minutes)');
 plt.ylabel(r'Red dye #40$\left ( \frac{C}{C0} \right )$');
 plt.legend(mylegend2);
-plt.savefig('Final_Project/Pictures/Red_Dye_40.png');
+plt.savefig('Final_Project/Pictures/Red_Dye_40_graph.png');
 plt.show()
 
 #Value at which effluent equals half of the initial red dye #3 stock concentration
