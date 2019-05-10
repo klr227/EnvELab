@@ -14,18 +14,17 @@ A schematic of the experiment can be seen in the figure below.
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/AddingSandColumn.JPG)   
 
 1. Pour sand into column to ensure the correct volume of sand is obtained.  
-2. The sand, coagulant and 100mL of water was added to a beaker for mixing.  
-3. While mixing, pH was monitored.  
-4. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic.  
-5. A small volume of the liquid in the mixture and then the sand portion of the mixture was added to the column. This "wet method" was employed so that there would not be any air pockets in the column.
-6. The initial amount of coagulant used was 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media.”
-7. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because Red Dye #3 was removed far more effectively by sand and coagulant than Red Dye #40 was. Where the red dye #40 experiments took minutes or less, the Red Dye #3 experiments took a few hours. Using 1500 μL of coagulant with Red Dye #3 would have taken too much time, and the stock tank for the solution would have run out.
-8. After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results.
-9. Both dyes were run through a sand-only column to obtain a baseline for the experiment.
-
+2. After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results.
+3. Both dyes were run through a sand-only column to obtain a baseline for the experiment.
+4. The sand, coagulant and 100mL of water was added to a beaker for mixing.  
+5. While mixing, pH was monitored.  
+6. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic. This as also when flocs generally started to form.
+7. A small volume of the liquid in the mixture and then the sand portion of the mixture was added to the column. This "wet method" was employed so that there would not be any air pockets in the column.
+8. The initial amount of coagulant used was 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media.”
+9. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because Red Dye #3 was removed far more effectively by sand and coagulant than Red Dye #40 was. Where the red dye #40 experiments took minutes or less, the Red Dye #3 experiments took a few hours. Using 1500 μL of coagulant with Red Dye #3 would have taken too much time, and the stock tank for the solution would have run out, thus reducing quality assurance in the experiment.
+10.
 
 ## Results and Discussion  
-![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3.png)  
 ### Red Dye #3
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
 |:------------------------:|:-----------------------:|
@@ -34,7 +33,8 @@ A schematic of the experiment can be seen in the figure below.
 |745 µL|102.92 min|
 |945 µL|127.84 min|
 
-![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40.png)
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3.png)  
+
 
 ### Red Dye #40
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
@@ -45,6 +45,7 @@ A schematic of the experiment can be seen in the figure below.
 |945 µL|5.58 min|
 |1500 µL|3.17 min|
 
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40.png)   
 
 Coagulant works very well for materials that precipitate, like Red Dye #3.  
 
@@ -137,7 +138,7 @@ for i in range(np.size(filenames2)):
   time_data2[i] = time_data2[i].to(u.min)
 mylegend2 = []
 for i in range(np.size(filenames2)):
-  plt.plot(time_data2[i], C_data2[i]/C_0_R4,'-');
+  plt.plot(time_data2[i], C_data2[i]/C_0_R40,'-');
   mylegend2.append(str(metadata2['Coagulant added (uL)'][i]) + ' µL')
 
 plt.xlabel(r'Time (seconds)');
@@ -156,7 +157,7 @@ for i in range(np.size(filenames1)):
       break
   half_time1[i] = time_data1[i][k]
 half_time1 = half_time1.to(u.min)
-half_time1
+
 
 half_R40 = C_0_R40*0.5
 half_time2 = np.zeros(np.size(filenames2))*u.s
@@ -167,4 +168,3 @@ for i in range(np.size(filenames2)):
       break
   half_time2[i] = time_data2[i][k]
 half_time2 = half_time2.to(u.min)
-half_time2
