@@ -30,7 +30,7 @@ After a few failed attempts at different flow rates, 1.25 mL/s was determined to
 |745 µL|102.92 min|
 |945 µL|127.84 min|
 
-<center>![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40.png)</center>
+[](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40.png)
 
 ### Red Dye #40
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
