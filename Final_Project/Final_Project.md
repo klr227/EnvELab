@@ -22,6 +22,25 @@ A schematic of the experiment can be seen in the figure below.
 After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results. Both dyes were run through a sand-only column to obtain a baseline for the experiment. After, the team began testing coagulant. We started with 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media”. We then increased the volumes used to obtain data for comparisons. As you can see, we used both dyes for all volumes except the 1500 microliters of coagulant. This is because we quickly realized that red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Thus, we figured that the last experiment would not be worth the time.
 
 ## Results and Discussion  
+### Red Dye #3
+|Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
+|:------------------------:|:-----------------------:|
+|0 µL|1.67 min|
+|445 µL|7.25 min|
+|745 µL|102.92 min|
+|945 µL|127.84 min|
+
+### Red Dye #40
+|Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
+|:------------------------:|:-----------------------:|
+|0 µL|100.00 min|
+|445 µL|170.00 min|
+|745 µL|310.02 min|
+|945 µL|335.00 min|
+|190 µL|190.01 min|
+
+\[\begin{pmatrix}100.00065599999957 & 169.9995772800044 & 310.0204972799954 & 334.9933545600045 & 190.01081952000084\end{pmatrix} second\]
+
 ## Conclusions and Suggestions  
 
 This lab yielded some interesting results, including the adsorption of Red Dye #40 with 1500 μL, which performed worse than the 745 and 945 μL runs. This could be attributed to a fluke, or a result of human error in measurement or calibrating the instruments. However, the team did note all of the pHs of sand and coagulant mixture before addition to the column, and the 1500 μL run had the lowest pH at 6.1. The team did not add any more NaOH after this point because nearly 4.5 mL had already been added, the most of any other run, and flocs had begun to form in the mixture. It would be an interesting experiment in the future to see if the performance of coagulant as an adsorbent has correlation with the pH it starts out at.  
