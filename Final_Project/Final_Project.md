@@ -22,7 +22,7 @@ A schematic of the experiment can be seen in the figure below.
 7. A small volume of the liquid in the mixture and then the sand portion of the mixture was added to the column. This "wet method" was employed so that there would not be any air pockets in the column.
 8. The initial amount of coagulant used was 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media.”
 9. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because Red Dye #3 was removed far more effectively by sand and coagulant than Red Dye #40 was. Where the red dye #40 experiments took minutes or less, the Red Dye #3 experiments took a few hours. Using 1500 μL of coagulant with Red Dye #3 would have taken too much time, and the stock tank for the solution would have run out, thus reducing quality assurance in the experiment.
-10.
+10. For Red Dye #3 only, the experimental apparatus was disassembled and cleaned (some parts rep)
 
 ## Results and Discussion  
 ### Red Dye #3
@@ -141,7 +141,7 @@ for i in range(np.size(filenames2)):
   plt.plot(time_data2[i], C_data2[i]/C_0_R40,'-');
   mylegend2.append(str(metadata2['Coagulant added (uL)'][i]) + ' µL')
 
-plt.xlabel(r'Time (seconds)');
+plt.xlabel(r'Time (minutes)');
 plt.ylabel(r'Red dye #40$\left ( \frac{C}{C0} \right )$');
 plt.legend(mylegend2);
 plt.savefig('Final_Project/Pictures/Red_Dye_40.png');
