@@ -38,7 +38,7 @@ A schematic of the experiment can be seen in the figure below.
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3.png)  
 
-
+From this data, it is clear that increasing the amount of coagulant increases the
 ### Red Dye #40
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
 |:------------------------:|:-----------------------:|
@@ -176,15 +176,20 @@ for i in range(np.size(filenames1)):
     if (C[k] >= half_R3):
       break
   half_time1[i] = time_data1[i][k]
+#Convert from seconds to minutes
 half_time1 = half_time1.to(u.min)
 
-
+#Value at which effluent equals half of the initial red dye #40 stock concentration
 half_R40 = C_0_R40*0.5
+#Empty array for times at which effluent equals 50% influent
 half_time2 = np.zeros(np.size(filenames2))*u.s
+#For loop to find time at which effluent equals 50% influent at which point it breaks the loop and adds that time to the empty half_time array
+
 for i in range(np.size(filenames2)):
   C = C_data2[i]
   for k in range(np.size(C)):
     if (C[k] >= half_R40):
       break
   half_time2[i] = time_data2[i][k]
+#Convert from seconds to minutes
 half_time2 = half_time2.to(u.min)
