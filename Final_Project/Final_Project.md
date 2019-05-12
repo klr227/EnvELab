@@ -4,28 +4,28 @@
 ## Introduction  
 Water has a lot of important features. Because of these unique features, water is vital to the survival of life on Earth, it is found all over the world, and it is a universal solvent. It’s ability to be such a powerful solvent has both helped and hurt. It can carry essential substances to cells around the body of living creatures. But it can also be harmful, as the things it carries can be toxic pollutants, especially in an increasingly polluted world. Thus, there needs to be a way to remove pollutants from water - and one of those ways is through adsorption.
 
-**Information about coagulant here**
+There are different substances that can be used for adsorption - one used in a previous experiment was activated carbon. The team chose to analyze coagulant as an adsorbent. Coagulant is used in the water treatment process to treat turbidity and remove color. Coagulant forms large clumps of solid particles in water called flocs, and these larger particles can be settled out more easily through a filter. Coagulant is also relatively inexpensive, as not much is required for treatment.
 
 ## Objectives  
-The purpose of this experiment was to evaluate the performance of coagulant as an adsorbent. The coagulant was tested at different concentrations and was assessed for two different substances - Red Dye #40 and Red Dye #3.
+The purpose of this experiment was to evaluate the performance of coagulant as an adsorbent. The coagulant was tested at different concentrations and was assessed for two different substances - red dye #40 and red dye #3.
 ## Procedures  
 A schematic of the experiment can be seen in the figure below.
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Stained_Column.png)   
 
-1. A ProCoDA calibration curve for the photometer was created for both Red Dye #40 and Red Dye #3 using 0, 10, 20, 39, 40, and 50 mg/L standards of each dye.
-2. Stock solution (100 mg/L) was made of Red Dye #40 and Red Dye #3.
-3. The stock solution actual concentration was determined using the calibrated photometer. Red Dye #40 was 100mg/L, but Red Dye #3 was 70mg/L for reasons discussed later.
+1. A ProCoDA calibration curve for the photometer was created for both red dye #40 and red dye #3 using 0, 10, 20, 39, 40, and 50 mg/L standards of each dye.
+2. Stock solution (100 mg/L) was made of red dye #40 and red dye #3.
+3. The stock solution actual concentration was determined using the calibrated photometer. Red dye #40 was 100mg/L, but red dye #3 was 70mg/L for reasons discussed later.
 4. Sand was poured into column to ensure the correct volume of sand was obtained.  
-5. After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both Red Dye #40 and Red Dye #3 enough to yield useful results and so that sand was not dislodged.
+5. After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results and so that sand was not dislodged.
 6. Both dyes were run through a sand-only column to obtain a baseline for the experiment (0 coagulant).
 7. The sand, coagulant and 100mL of water was added to a beaker for mixing.  
 8. While mixing, pH was monitored.  
 9. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic. This as also when flocs generally started to form.
 10. A small volume of the liquid in the mixture and then the sand portion of the mixture was added to the column. This "wet method" was employed so that there would not be any air pockets in the column.
 11. The initial amount of coagulant used was 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media.”
-12. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because Red Dye #3 was removed far more effectively by sand and coagulant than Red Dye #40 was. Where the red dye #40 experiments took minutes or less, the Red Dye #3 experiments took a few hours. Using 1500 μL of coagulant with Red Dye #3 would have taken too much time, and the stock tank for the solution would have run out, thus reducing quality assurance in the experiment.
-13. For Red Dye #3 only, the experimental apparatus was disassembled and cleaned (some parts replaced) between runs because this dye stained the tubing and other equipment.
+12. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Using 1500 μL of coagulant with red dye #3 would have taken too much time, and the stock tank for the solution would have run out, thus reducing quality assurance in the experiment.
+13. For red dye #3 only, the experimental apparatus was disassembled and cleaned (some parts replaced) between runs because this dye stained the tubing and other equipment.
 
 ## Results and Discussion  
 ### Red Dye #3
@@ -52,12 +52,14 @@ From this data, it is clear that increasing the amount of coagulant increases th
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40_graph.png)   
 
-For Red Dye #40, the
+For red dye #40, the results are more uniform than those of red dye #3. This can be attributed to red dye #40's ability to fully dissolve in water, so the stock solution was uniform. results for this dye also show that increasing the amount of coagulant increases adsorption. Like the results for red dye #3, these experiments show that the performance between 745 μL and 945 μL of coagulant is minimally different. The strangest result was the run with 1500 μL of coagulant, which performed worse than 745 μL and 945 μL. This was surprising, but was probably due to the initial sand-coagulant mixture being too acidic, as the most NaOH was need to counteract the acidity of the largest amount of coagulant, and it may not have been enough.
 
 ## Conclusions and Suggestions  
-Coagulant works very well for materials that precipitate, like Red Dye #3.  
+Coagulant works very well for materials that precipitate, like red dye #3. Red dye #40 was able to reach 50% of the stock concentration within minutes, whereas red dye #3 took much longer - some runs took hours. Because red dye #3 precipitates easily, it is adsorbed very well.
 
-This lab yielded some interesting results, including the adsorption of Red Dye #40 with 1500 μL, which performed worse than the 745 and 945 μL runs. This could be attributed to a fluke, or a result of human error in measurement or calibrating the instruments. However, the team did note all of the pHs of sand and coagulant mixture before addition to the column, and the 1500 μL run had the lowest pH at 6.1. The team did not add any more NaOH after this point because nearly 4.5 mL had already been added, the most of any other run, and flocs had begun to form in the mixture. It would be an interesting experiment in the future to see if the performance of coagulant as an adsorbent has correlation with the pH it starts out at.  
+Additionally, for both dye types there was little difference between the 745 μL and 945 μL runs, indicating that there is a plateau in the performance of coagulant as more is added.
+
+This lab yielded some interesting results, including the adsorption of red dye #40 with 1500 μL, which performed worse than the 745 and 945 μL runs. This could be attributed to a fluke, or a result of human error in measurement or calibrating the instruments. However, the team did note all of the pHs of sand and coagulant mixture before addition to the column, and the 1500 μL run had the lowest pH at 6.1. The team did not add any more NaOH after this point because nearly 4.5 mL had already been added, the most of any other run, and flocs had begun to form in the mixture. It would be an interesting experiment in the future to see if the performance of coagulant as an adsorbent has correlation with the pH it starts out at.  
 
 ```python
 from aguaclara.core.units import unit_registry as u
