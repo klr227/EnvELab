@@ -46,7 +46,6 @@ A schematic of the experiment can be seen in the figure below.
 
 From this data, it is clear that increasing the amount of coagulant increases the effectiveness of it as an adsorbent. However, there is a big jump in the time it takes the dye to return to 50% of the stock solution from 445 μL and 745 μL, whereas the difference between 745 μL and 945 μL is not very large. This would indicate that there is some level where the performance of coagulant begins to plateau, meaning that adding more does not effect how much material is removed from solution.
 
-
 ### Red Dye #40
 |Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
 |:------------------------:|:-----------------------:|
