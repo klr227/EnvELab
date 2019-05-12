@@ -62,12 +62,11 @@ Additionally, for both dye types there was little difference between the 745 μL
 This lab yielded some interesting results, including the adsorption of red dye #40 with 1500 μL, which performed worse than the 745 and 945 μL runs. This could be attributed to a fluke, or a result of human error in measurement or calibrating the instruments. However, the team did note all of the pHs of sand and coagulant mixture before addition to the column, and the 1500 μL run had the lowest pH at 6.1. The team did not add any more NaOH after this point because nearly 4.5 mL had already been added, the most of any other run, and flocs had begun to form in the mixture. It would be an interesting experiment in the future to see if the performance of coagulant as an adsorbent has correlation with the pH it starts out at.  
 
 
-## Bibliography  
-\begin{itemize}  
-  \item Gebbie, Peter. (July 2006). An Operator's Guide to Water Treatment Coagulants, \textit{Earth Tech Engineering}.  
-  \item Lin et. al. (January 2012). Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media, \textit{Journal of Environmental Engineering}, 138, 1.  
-  \item Weber-Shirk, Monroe. (December 2018). Adsorption Lab, \textit{CEE4530 GitHub}.  
-\end{itemize}  
+## Bibliography   
+* Gebbie, Peter. (July 2006). An Operator's Guide to Water Treatment Coagulants, \textit{Earth Tech Engineering}.  
+* Lin et. al. (January 2012). Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media, \textit{Journal of Environmental Engineering}, 138, 1.  
+* Weber-Shirk, Monroe. (December 2018). Adsorption Lab, \textit{CEE4530 GitHub}.  
+
 
 ## Appendix
 ```python
