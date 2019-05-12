@@ -13,19 +13,25 @@ A schematic of the experiment can be seen in the figure below.
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Stained_Column.png)   
 
-1. A ProCoDA calibration curve for the photometer was created for both red dye #40 and red dye #3 using 0, 10, 20, 39, 40, and 50 mg/L standards of each dye.
-2. Stock solution (100 mg/L) was made of red dye #40 and red dye #3.
-3. The stock solution actual concentration was determined using the calibrated photometer. Red dye #40 was 100mg/L, but red dye #3 was 70mg/L for reasons discussed later.
+1. A ProCoDA calibration curve for the photometer was created for both red dye #40 and red dye #3 using 0, 10, 20, 39, 40, and 50 mg/L standards of each dye.  
+2. Stock solution (100 mg/L) was made of red dye #40 and red dye #3.  
+3. The stock solution actual concentration was determined using the calibrated photometer. Red dye #40 was 100mg/L, but red dye #3 was 70mg/L for reasons discussed later.  
 4. Sand was poured into column to ensure the correct volume of sand was obtained.  
-5. After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results and so that sand was not dislodged.
+5. After a few failed attempts at different flow rates, 1.25 mL/s was determined to work for both red dye #40 and red dye #3 enough to yield useful results and so that sand was not dislodged.  
 6. Both dyes were run through a sand-only column to obtain a baseline for the experiment (0 coagulant).
 7. The sand, coagulant and 100mL of water was added to a beaker for mixing.  
 8. While mixing, pH was monitored.  
-9. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic. This as also when flocs generally started to form.
-10. A small volume of the liquid in the mixture and then the sand portion of the mixture was added to the column. This "wet method" was employed so that there would not be any air pockets in the column.
-11. The initial amount of coagulant used was 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media.”
-12. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Using 1500 μL of coagulant with red dye #3 would have taken too much time, and the stock tank for the solution would have run out, thus reducing quality assurance in the experiment.
-13. For red dye #3 only, the experimental apparatus was disassembled and cleaned (some parts replaced) between runs because this dye stained the tubing and other equipment.
+9. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic. This as also when flocs generally started to form.  
+
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/MeasuringpH.png)  
+
+10. A small volume of the liquid in the mixture and then the sand portion of the mixture was added to the column. This "wet method" was employed so that there would not be any air pockets in the column.  
+
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/AddingSandColumn.png)  
+
+11. The initial amount of coagulant used was 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media.”  
+12. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Using 1500 μL of coagulant with red dye #3 would have taken too much time, and the stock tank for the solution would have run out, thus reducing quality assurance in the experiment.  
+13. For red dye #3 only, the experimental apparatus was disassembled and cleaned (some parts replaced) between runs because this dye stained the tubing and other equipment.  
 
 ## Results and Discussion  
 ### Red Dye #3
