@@ -63,9 +63,9 @@ This lab yielded some interesting results, including the adsorption of red dye #
 
 
 ## Bibliography   
-* Gebbie, Peter. (July 2006). An Operator's Guide to Water Treatment Coagulants, \textit{Earth Tech Engineering}.  
-* Lin et. al. (January 2012). Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media, \textit{Journal of Environmental Engineering}, 138, 1.  
-* Weber-Shirk, Monroe. (December 2018). Adsorption Lab, \textit{CEE4530 GitHub}.  
+* Gebbie, Peter. (July 2006). An Operator's Guide to Water Treatment Coagulants, *Earth Tech Engineering*.  
+* Lin et. al. (January 2012). Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media, *Journal of Environmental Engineering*, 138, 1.  
+* Weber-Shirk, Monroe. (December 2018). Adsorption Lab, *CEE4530 GitHub*.  
 
 
 ## Appendix
