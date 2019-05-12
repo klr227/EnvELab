@@ -23,11 +23,11 @@ A schematic of the experiment can be seen in the figure below.
 8. While mixing, pH was monitored.  
 9. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic. This as also when flocs generally started to form.  
 
-![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/MeasuringpH.png)  
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/MeasuringpH.JPG)  
 
 10. A small volume of the liquid in the mixture and then the sand portion of the mixture was added to the column. This "wet method" was employed so that there would not be any air pockets in the column.  
 
-![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/AddingSandColumn.png)  
+![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/AddingSandColumn.JPG)  
 
 11. The initial amount of coagulant used was 445 μL, which is equivalent to 22 moles of Aluminum per meter cubed. This concentration was suggested as ideal in “Enhanced Particle Capture through Aluminum Hydroxide Addition to Pores in Sand Media.”  
 12. The amount of coagulant was varied afterward, as can be seen in Table 1. Both dyes were used for all volumes except the 1500 microliters of coagulant. This is because red dye #3 was removed far more effectively by sand and coagulant than red dye #40 was. Where the red dye #40 experiments took minutes or less, the red dye #3 experiments took a few hours. Using 1500 μL of coagulant with red dye #3 would have taken too much time, and the stock tank for the solution would have run out, thus reducing quality assurance in the experiment.  
