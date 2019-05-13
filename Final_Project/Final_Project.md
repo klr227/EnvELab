@@ -21,7 +21,7 @@ A schematic of the experiment can be seen in the figure below.
 6. Both dyes were run through a sand-only column to obtain a baseline for the experiment (0 coagulant).
 7. The sand, coagulant and 100mL of water was added to a beaker for mixing.  
 8. While mixing, pH was monitored.  
-9. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant is makes the mixture acidic. This as also when flocs generally started to form.  
+9. A basic solution of 0.5M NaOH was added until a pH of at least 6 was reached (Source: Water Treatment Coag). This was a necessary step because coagulant is largely ineffective in acidic conditions, and the aluminum in coagulant makes the mixture acidic. This is also when flocs generally started to form.  
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/MeasuringpH.JPG)  
 
@@ -35,25 +35,25 @@ A schematic of the experiment can be seen in the figure below.
 
 ## Results and Discussion  
 ### Red Dye #3
-|Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
-|:------------------------:|:-----------------------:|
-|0 µL|1.67 min|
-|445 µL|7.25 min|
-|745 µL|102.92 min|
-|945 µL|127.84 min|
+|Volume of 70.28 g/L PAC as Al|Time to 50% Influent|pH of Sand w/ PAC|
+|:------------------------:|:-----------------------:|:--------------------:|
+|0 µL|1.67 min|0|
+|445 µL|7.25 min|6.9|
+|745 µL|102.92 min|6.7|
+|945 µL|127.84 min|6.6|
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_3_graph.png)  
 
 From this data, it is clear that increasing the amount of coagulant increases the effectiveness of it as an adsorbent. However, there is a big jump in the time it takes the dye to return to 50% of the stock solution from 445 μL and 745 μL, whereas the difference between 745 μL and 945 μL is not very large. This would indicate that there is some level where the performance of coagulant begins to plateau, meaning that adding more does not effect how much material is removed from solution.
 
 ### Red Dye #40
-|Volume of 70.28 g/L PAC as Al|Time to 50% Influent|
-|:------------------------:|:-----------------------:|
-|0 µL|1.67 min|
-|445 µL|2.83 min|
-|745 µL|5.17 min|
-|945 µL|5.58 min|
-|1500 µL|3.17 min|
+|Volume of 70.28 g/L PAC as Al|Time to 50% Influent|pH of Sand w/ PAC|
+|:------------------------:|:-----------------------:|:--------------------:|
+|0 µL|1.67 min|0|
+|445 µL|2.83 min|8.0|
+|745 µL|5.17 min|6.0|
+|945 µL|5.58 min|7.5|
+|1500 µL|3.17 min|6.1|
 
 ![](https://github.com/klr227/EnvELab/blob/master/Final_Project/Pictures/Red_Dye_40_graph.png)   
 
